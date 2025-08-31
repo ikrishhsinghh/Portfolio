@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishna K Singh - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fafafa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(120deg, #fdfbfb, #ebedee);
+      animation: fadeIn 2s ease-in;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #2d2d2d;
+      animation: slideDown 1s ease-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 10px 0 20px;
+      animation: slideUp 1.5s ease-out;
+    }
+    header .btns a {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 5px;
+      background: #4cafef;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    header .btns a:hover {
+      background: #2196f3;
+      transform: scale(1.05);
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 70px 20px;
+      animation: fadeIn 2s ease-in;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2196f3;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: #2196f3;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 20px 0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .skill {
+      background: #e3f2fd;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 500;
+      transition: transform 0.3s;
+    }
+    .skill:hover {
+      transform: scale(1.05);
+      background: #bbdefb;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background: #2196f3;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    form button:hover {
+      background: #1976d2;
+      transform: scale(1.05);
+    }
+    footer {
+      background: #2196f3;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Krishna K Singh</h1>
+    <p>Bachelor’s Student | UI/UX • Cloud • Data Analytics</p>
+    <div class="btns">
+      <a href="#portfolio">View Portfolio</a>
+      <a href="#contact">Contact Me</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>Hey there! I’m currently pursuing a Bachelor’s degree in Computer Science, driven by a deep curiosity for technology, design, and data. While I’m still a student, I’m actively building a strong foundation in both creative and technical skills to shape a versatile and future-ready career.
+I’m passionate about UI/UX Design and Graphic Design, I love crafting experiences that are not only visually appealing but also user-centric and meaningful. At the same time, I’m diving into the world of Cloud Engineering and Data Analytics, learning how to manage infrastructure and uncover insights that drive smart decisions.
+I believe in staying curious, learning continuously, and combining creativity with logic to solve real-world problems. Whether it's designing an intuitive app interface, exploring cloud systems, or interpreting data patterns—I’m always excited to explore, build, and grow.
+Currently learning. Constantly improving. Eager to contribute. <br>
+Let's Connect Through Linkedin</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>School</h3>
+      <p>New Bombay City School CBSE | End 2023</p>
+      <p>AISSE Percentage: 71.4%</p>
+    </div>
+
+    <div class="card">
+      <h3>Junior College</h3>
+      <h5>Science Stream | ENG+PCMB+IT</h5>
+      <p>Sainath Junior College | End 2025</p>
+      <p>HSC Percentage: 66.0%</p>
+    </div>
+
+    <div class="card">
+ <div class="card">
+      <h3>Degree College</h3>
+      <h5>Bachelor of Computer Science</h5>
+      <p>Pillai College of Arts, Commerce and Science | 2025 - Present</p>
+      <p>Focus: UI/UX, Cloud Computing, Data Analytics</p>
+    </div>
+  </section>
+
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Anchoring Committee Head</h3>
+      <h5>Sainath Junior College | DEC 2023 - FEB 2025</h5>
+<p> Selected through auditions to join the Anchoring Committee, a role previously managed by faculty members. <br> Headed and anchored 5+ major events, including two flagship college programs: Annual Day and Summit.<br> Oversaw event flow, stage management, and audience engagement, ensuring smooth execution in collaboration with faculty and organizing teams.<br> Personally invited by the Principal in SYJC to continue as Committee Head, providing mentorship and guidance to FYJC students, despite senior students usually being exempt due to board preparations.</p>
+    </div>
+
+    <div class="card">
+      <div class="card">
+      <h3>Computer Association | Team Social Media </h3>
+      <h5>Pillai College of Arts, Commerce and Science | AUG 2025 - PRESENT </h5>
+      <p>Being a part of Computer Association (CA) at PCACS as a First Year CS student has been one of the most rewarding experiences of my academic journey. Out of many applicants, only 22 were selected, and I am grateful to be among them. I have been assigned to the Social Media Department, where I contribute towards digital communication, branding, and engagement.<br>
+CA, to me, is like a tree, built on one strong root of teamwork and vision, branching out into various departments like social media, technical, event management, and more. Each branch has its own responsibilities, but together we create something impactful.<br>
+This role is teaching me not just technical and creative skills, but also coordination, leadership, and accountability. It’s more than an association, it’s a platform to grow, collaborate, and take responsibility while working towards a common goal.</p>
+    </div>
+</section>
+
+     <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="card">
+      <h3>Tiara Jewels (UI/UX Design)</h3>
+      <p>This is my first UI/UX design project, created in Figma for a fictional jewelry brand named Tiara Jewels. The concept behind "Tiara" connects diamonds, jewels, and gold, symbolizing elegance and fusion.
+The design focuses on a modern, user-friendly interface with smooth navigation, product highlights, and a premium shopping experience. It was a great learning step for me in UI/UX design fundamentals like layout, typography, visual hierarchy, and color balance.</p>
+    </div>
+    <div class="card">
+ <div class="card">
+      <h3>PyUmbra: Weather Forecast App</h3>
+      <p>PyUmbra is a Python-based project designed as an umbrella framework that combines multiple weather and environment-related features into a single reliable solution. Just as an umbrella protects us from uncertain weather, PyUmbra provides users with comprehensive insights into climatic and environmental conditions. Python + HTML/CSS project showing real-time weather forecasts.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill">UI/UX Design</div>
+      <div class="skill">Prompt Engineering</div>
+      <div class="skill">HTML5 & CSS</div>
+      <div class="skill">Python</div>
+      <div class="skill">Oracle Database</div>
+      <div class="skill">Cloud Computing</div>
+      <div class="skill">Graphic Design</div>
+      <div class="skill">Video Editing</div>
+      <div class="skill">Leadership</div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="card">
+      <p>I am currently a student and open to freelance or internship opportunities in cloud computing, UI/UX design, and data analytics. Feel free to reach out for collaborations or opportunities.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:i.krishnasinghh@gmail.com">i.krishnasinghh@gmail.com</a></p>
+      <p>Phone: +91 8850534969</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank">ikrishnasinghh</a></p>
+      <p>GitHub: <a href="https://github.com/ikrishhsinghh" target="_blank">ikrishhsinghh</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Krishna K Singh. All rights reserved.</p>
+  </footer>
+</body>
+</html>
