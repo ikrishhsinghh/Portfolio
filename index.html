@@ -128,6 +128,17 @@
       width: 100%;
     }
     
+    /* Mobile Nav Button */
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--text-light);
+      font-size: 1.8rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    
     .hero {
       flex: 1;
       display: flex;
@@ -461,6 +472,7 @@
       background: linear-gradient(45deg, var(--neon-blue), transparent, var(--neon-purple));
       opacity: 0;
       transition: opacity 0.3s;
+      z-index: -1;
     }
     
     .skill-item:hover {
@@ -559,6 +571,77 @@
       box-shadow: 0 5px 15px rgba(0, 217, 255, 0.4);
     }
     
+    /* Mobile Navigation */
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: var(--dark-card);
+      z-index: 999;
+      padding: 80px 30px 30px;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+    }
+    
+    .mobile-nav.active {
+      right: 0;
+    }
+    
+    .mobile-nav-links {
+      list-style: none;
+    }
+    
+    .mobile-nav-links li {
+      margin-bottom: 20px;
+    }
+    
+    .mobile-nav-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 1.2rem;
+      display: block;
+      padding: 10px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    
+    .mobile-nav-links a:hover {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--neon-blue);
+    }
+    
+    .close-nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      color: var(--text-light);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      z-index: 998;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
     /* Responsive Design */
     @media (max-width: 968px) {
       .hero h1 {
@@ -593,6 +676,10 @@
         display: none;
       }
       
+      .nav-toggle {
+        display: block;
+      }
+      
       .hero h1 {
         font-size: 2.5rem;
       }
@@ -608,6 +695,75 @@
       .hero-btns {
         flex-direction: column;
         gap: 15px;
+      }
+      
+      .section-title h2 {
+        font-size: 2.2rem;
+      }
+      
+      .about-content {
+        padding: 30px;
+      }
+      
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .skill-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-details li {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-details i {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      
+      .floating-icon {
+        font-size: 1.2rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+      
+      .about-content {
+        padding: 20px;
+      }
+      
+      .timeline-content {
+        padding: 20px;
+      }
+      
+      .portfolio-content {
+        padding: 20px;
+      }
+      
+      .skill-category {
+        padding: 20px;
+      }
+      
+      .contact-info {
+        padding: 25px;
       }
     }
     
@@ -625,6 +781,24 @@
   </style>
 </head>
 <body>
+  <!-- Mobile Navigation Overlay -->
+  <div class="overlay" id="nav-overlay"></div>
+  
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="close-nav" id="close-nav">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul class="mobile-nav-links">
+      <li><a href="#about" onclick="closeMobileNav()">About</a></li>
+      <li><a href="#education" onclick="closeMobileNav()">Education</a></li>
+      <li><a href="#experience" onclick="closeMobileNav()">Experience</a></li>
+      <li><a href="#portfolio" onclick="closeMobileNav()">Portfolio</a></li>
+      <li><a href="#skills" onclick="closeMobileNav()">Skills</a></li>
+      <li><a href="#contact" onclick="closeMobileNav()">Contact</a></li>
+    </ul>
+  </div>
+
   <!-- Header & Hero Section -->
   <header>
     <div class="header-bg"></div>
@@ -646,6 +820,9 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button class="nav-toggle" id="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
     
     <div class="hero">
@@ -883,6 +1060,28 @@
         container.appendChild(icon);
       }
     }
+    
+    // Mobile Navigation
+    const navToggle = document.getElementById('nav-toggle');
+    const closeNav = document.getElementById('close-nav');
+    const mobileNav = document.getElementById('mobile-nav');
+    const overlay = document.getElementById('nav-overlay');
+    
+    function openMobileNav() {
+      mobileNav.classList.add('active');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMobileNav() {
+      mobileNav.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+    
+    navToggle.addEventListener('click', openMobileNav);
+    closeNav.addEventListener('click', closeMobileNav);
+    overlay.addEventListener('click', closeMobileNav);
     
     // Initialize floating icons
     addFloatingIcons();
