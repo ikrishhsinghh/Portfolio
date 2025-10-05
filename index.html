@@ -382,8 +382,12 @@
     /* Portfolio Section */
     .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 50px 30px; /* 50px vertical, 30px horizontal */
+  grid-template-columns: 1fr; /* one column for mobile/your screenshot */
+  gap: 40px; /* Increase vertical space between items */
+}
+
+.portfolio-item {
+  margin-bottom: 0; /* Remove if using grid gap */
 }
     
     .portfolio-item {
@@ -928,8 +932,6 @@
           <p>The design focuses on a modern, user-friendly interface with smooth navigation, product highlights, and a premium shopping experience.</p>
         </div>
       </div>
-       </div>
-      <div class="portfolio-grid">
       <div class="portfolio-item">
         <div class="portfolio-content">
           <h3>PyUmbra: Weather Forecast App</h3>
@@ -937,8 +939,6 @@
           <p>Just as an umbrella protects us from uncertain weather, PyUmbra provides users with comprehensive insights into climatic and environmental conditions. Python + HTML/CSS project showing real-time weather forecasts.</p>
         </div>
          </div>
-         </div>
-        <div class="portfolio-grid">
         <div class="portfolio-item">
         <div class="portfolio-content">
           <h3>Lifestyle Analyzer</h3>
