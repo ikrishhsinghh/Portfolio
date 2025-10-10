@@ -1,22 +1,1058 @@
-<footer>
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/krishna-k-singh/" target="_blank" title="LinkedIn">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/ikrishhsinghh" target="_blank" title="GitHub">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="mailto:krishna@example.com" title="Email">
-      <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://www.fiverr.com/krishna" target="_blank" title="Fiverr">
-      <i class="fas fa-f"></i>
-    </a>
-  </div>
-  <p>&copy; 2025 Krishna K Singh. All rights reserved.</p>
-</footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishna K Singh - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --neon-blue: #00d9ff;
+      --neon-pink: #ff2a6d;
+      --neon-purple: #8a3ffc;
+      --dark-bg: #0a0a14;
+      --dark-card: #13131f;
+      --text-light: #f5f5f7;
+      --text-gray: #8a8a8e;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    
+    h1, h2, h3, h4, h5 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+    }
+    
+    /* Header & Navigation */
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0a0a14 0%, #1a1a2e 100%);
+      z-index: -2;
+    }
+    
+    .header-bg::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(10, 10, 20, 0) 60%, rgba(0, 217, 255, 0.1) 100%);
+      animation: rotate 20s linear infinite;
+      pointer-events: none;
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+      background: rgba(10, 10, 20, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-links li {
+      margin-left: 30px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-weight: 500;
+      transition: color 0.3s;
+      position: relative;
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+      transition: width 0.3s;
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    /* Mobile Nav Button */
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--text-light);
+      font-size: 1.8rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      z-index: 2;
+    }
+    
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink), var(--neon-purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 5s ease infinite;
+      background-size: 300% 300%;
+    }
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      color: var(--text-gray);
+    }
+    
+    .hero-btns {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    
+    .btn {
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+      color: white;
+      box-shadow: 0 4px 20px rgba(0, 217, 255, 0.4);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 217, 255, 0.6);
+    }
+    
+    .btn-outline {
+      border: 2px solid var(--neon-blue);
+      color: var(--neon-blue);
+    }
+    
+    .btn-outline:hover {
+      background: rgba(0, 217, 255, 0.1);
+      transform: translateY(-3px);
+    }
+    
+    .floating-icons {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    
+    .floating-icon {
+      position: absolute;
+      opacity: 0.5;
+      font-size: 1.5rem;
+      color: var(--neon-blue);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(10deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+    
+    /* Section Styling */
+    section {
+      padding: 100px 40px;
+      position: relative;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .section-title p {
+      color: var(--text-gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* About Section */
+    .about-content {
+      background: var(--dark-card);
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      margin: 0 auto;
+      max-width: 900px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .about-content::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, var(--neon-blue), transparent, var(--neon-purple));
+      z-index: -1;
+      border-radius: 20px;
+      animation: borderGlow 3s ease infinite;
+    }
+    
+    @keyframes borderGlow {
+      0% { opacity: 0.5; }
+      50% { opacity: 1; }
+      100% { opacity: 0.5; }
+    }
+    
+    /* Education & Experience */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--neon-blue), var(--neon-purple));
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+      border-radius: 10px;
+    }
+    
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+    
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+    
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+    
+    .timeline-content {
+      padding: 25px;
+      background: var(--dark-card);
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .timeline-content h3 {
+      margin-bottom: 10px;
+      color: var(--neon-blue);
+    }
+    
+    .timeline-content h5 {
+      color: var(--neon-purple);
+      margin-bottom: 10px;
+    }
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: var(--neon-blue);
+      border-radius: 50%;
+      top: 20px;
+      z-index: 1;
+      box-shadow: 0 0 0 4px rgba(0, 217, 255, 0.2), 0 0 15px var(--neon-blue);
+    }
+    
+    .timeline-item:nth-child(odd)::after {
+      right: -10px;
+    }
+    
+    .timeline-item:nth-child(even)::after {
+      left: -10px;
+    }
+    
+    /* Portfolio Section */
+    .portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* one column for mobile/your screenshot */
+  gap: 40px; /* Increase vertical space between items */
+}
 
-<footer>
+.portfolio-item {
+  margin-bottom: 0; /* Remove if using grid gap */
+}
+    
+    .portfolio-item {
+      background: var(--dark-card);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    
+    .portfolio-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 217, 255, 0.2);
+    }
+    
+    .portfolio-content {
+      padding: 25px;
+    }
+    
+    .portfolio-content h3 {
+      margin-bottom: 15px;
+      color: var(--neon-blue);
+    }
+    
+    /* Skills Section */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    
+    .skill-category {
+      background: var(--dark-card);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease;
+    }
+    
+    .skill-category.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .skill-category h3 {
+      margin-bottom: 20px;
+      color: var(--neon-blue);
+      text-align: center;
+    }
+    
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    
+    .skill-item {
+      background: rgba(0, 217, 255, 0.1);
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 500;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .skill-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, var(--neon-blue), transparent, var(--neon-purple));
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: -1;
+    }
+    
+    .skill-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+    }
+    
+    .skill-item:hover::before {
+      opacity: 0.2;
+    }
+    
+    /* Contact Section */
+    .contact-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+    
+    .contact-info {
+      background: var(--dark-card);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .contact-info h3 {
+      margin-bottom: 25px;
+      color: var(--neon-blue);
+    }
+    
+    .contact-details {
+      list-style: none;
+    }
+    
+    .contact-details li {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .contact-details i {
+      margin-right: 15px;
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 217, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--neon-blue);
+      font-size: 1.2rem;
+    }
+    
+    .contact-details a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .contact-details a:hover {
+      color: var(--neon-blue);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark-card);
+      color: var(--text-light);
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+  .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Add spacing between icons */
+  margin-bottom: 25px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 217, 255, 0.1);
+  color: var(--neon-blue);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  background: var(--neon-blue);
+  color: var(--dark-bg);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 217, 255, 0.4);
+}
+    
+    /* Mobile Navigation */
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: var(--dark-card);
+      z-index: 999;
+      padding: 80px 30px 30px;
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+    }
+    
+    .mobile-nav.active {
+      right: 0;
+    }
+    
+    .mobile-nav-links {
+      list-style: none;
+    }
+    
+    .mobile-nav-links li {
+      margin-bottom: 20px;
+    }
+    
+    .mobile-nav-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 1.2rem;
+      display: block;
+      padding: 10px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    
+    .mobile-nav-links a:hover {
+      background: rgba(0, 217, 255, 0.1);
+      color: var(--neon-blue);
+    }
+    
+    .close-nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      color: var(--text-light);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      z-index: 998;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 968px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+      
+      .timeline::after {
+        left: 31px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+      
+      .timeline-item::after {
+        left: 21px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      nav {
+        padding: 15px 20px;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .nav-toggle {
+        display: block;
+      }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero p {
+        font-size: 1.2rem;
+      }
+      
+      section {
+        padding: 80px 20px;
+      }
+      
+      .hero-btns {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .section-title h2 {
+        font-size: 2.2rem;
+      }
+      
+      .about-content {
+        padding: 30px;
+      }
+      
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .skill-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-details li {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .contact-details i {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      
+      .floating-icon {
+        font-size: 1.2rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+      
+      .about-content {
+        padding: 20px;
+      }
+      
+      .timeline-content {
+        padding: 20px;
+      }
+      
+      .portfolio-content {
+        padding: 20px;
+      }
+      
+      .skill-category {
+        padding: 20px;
+      }
+      
+      .contact-info {
+        padding: 25px;
+      }
+    }
+    
+    /* Animation utilities */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Mobile Navigation Overlay -->
+  <div class="overlay" id="nav-overlay"></div>
+  
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="close-nav" id="close-nav">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul class="mobile-nav-links">
+      <li><a href="#about" onclick="closeMobileNav()">About</a></li>
+      <li><a href="#education" onclick="closeMobileNav()">Education</a></li>
+      <li><a href="#experience" onclick="closeMobileNav()">Experience</a></li>
+      <li><a href="#portfolio" onclick="closeMobileNav()">Portfolio</a></li>
+      <li><a href="#skills" onclick="closeMobileNav()">Skills</a></li>
+      <li><a href="#contact" onclick="closeMobileNav()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Header & Hero Section -->
+  <header>
+    <div class="header-bg"></div>
+    <div class="floating-icons">
+      <div class="floating-icon" style="top: 20%; left: 10%; animation-delay: 0s;"><i class="fas fa-code"></i></div>
+      <div class="floating-icon" style="top: 60%; left: 85%; animation-delay: 1s;"><i class="fas fa-cloud"></i></div>
+      <div class="floating-icon" style="top: 40%; left: 80%; animation-delay: 2s;"><i class="fas fa-paint-brush"></i></div>
+      <div class="floating-icon" style="top: 70%; left: 15%; animation-delay: 3s;"><i class="fas fa-database"></i></div>
+      <div class="floating-icon" style="top: 30%; left: 70%; animation-delay: 4s;"><i class="fas fa-chart-line"></i></div>
+    </div>
+    
+    <nav>
+      <div class="logo">Krishna Singh</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+    
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Krishna K Singh</h1>
+        <p>Bachelor's Computer Science Student | UI/UX • Data Analyst • Cloud</p>
+        <div class="hero-btns">
+          <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+    <div class="about-content fade-in">
+      <p>Hey there! I'm currently pursuing a Bachelor's degree in Computer Science, driven by a deep curiosity for technology, design, and data. While I'm still a student, I'm actively building a strong foundation in both creative and technical skills to shape a versatile and future-ready career.</p>
+      <p>I'm passionate about UI/UX Design and Graphic Design, I love crafting experiences that are not only visually appealing but also user-centric and meaningful. At the same time, I'm diving into the world of Cloud Engineering and Data Analytics, learning how to manage infrastructure and uncover insights that drive smart decisions.</p>
+      <p>I believe in staying curious, learning continuously, and combining creativity with logic to solve real-world problems. Whether it's designing an intuitive app interface, exploring cloud systems, or interpreting data patterns—I'm always excited to explore, build, and grow.</p>
+      <p>Currently learning. Constantly improving. Eager to contribute. <br>Let's Connect Through LinkedIn</p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <div class="section-title">
+      <h2>Education</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>School</h3>
+          <h5>5 High Scored Subjects | ENG+HINDI+SCI+SST+IT</h5>
+          <p>New Bombay City School CBSE | End 2023</p>
+            <p>AISSE Percentage: 71.4%</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Junior College</h3>
+          <h5>Science Stream | ENG+PCMB+IT</h5>
+          <p>Sainath Junior College | End 2025</p>
+          <p>HSC Percentage: 66.0%</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Degree College</h3>
+          <h5>Bachelor of Computer Science</h5>
+          <p>Pillai College of Arts, Commerce and Science | 2025 - Present</p>
+          <p>Focus: UI/UX, Cloud Computing, Data Analytics</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="section-title">
+      <h2>Experience</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Anchoring Committee Head</h3>
+          <h5>Sainath Junior College | DEC 2023 - FEB 2025</h5>
+          <p>Selected through auditions to join the Anchoring Committee, a role previously managed by faculty members. Headed and anchored 5+ major events, including two flagship college programs: Annual Day and Summit.</p>
+          <p>Oversaw event flow, stage management, and audience engagement, ensuring smooth execution in collaboration with faculty and organizing teams. Personally invited by the Principal in SYJC to continue as Committee Head, providing mentorship and guidance to FYJC students, despite senior students usually being exempt due to board preparations.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Teaching/Lecturer</h3>
+          <h5>Viva Tutorials | MAR 2025 - MAY 2025</h5>
+          <p>During the gap after my 12th exams (awaiting 2025 results), I, Taught ICSE Biology and Social Science to Grade 10 students for 3 months Balanced self-learning (UI/UX design) with hands-on teaching experience Developed lesson plans, executed engaging classes, and improved student understanding. Gained key skills: clear communication, practical teaching methods, and structured planning.</p>
+          <p>This role taught me how to simplify complex topics and adapt to students’ needs—a foundation for both education and design!</p>
+        </div>
+      </div>
+       <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Freelance</h3>
+          <h5>Freelancing on Various Platform | JUL 2025 - PRESENT</h5>
+          <p>After initially exploring Freelancing in 2020–2021, I’ve returned in 2025 with a broader set of skills and a renewed passion for delivering high-quality work to clients around the globe. I specialize in UI/UX design, graphic design, content and script writing, video and image editing, and much more. </p>
+          <p>My goal is to help you bring your ideas to life with creativity, precision, and professionalism, while offering services that fit your needs and budget.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Computer Association | Team Social Media</h3>
+          <h5>Pillai College of Arts, Commerce and Science | AUG 2025 - PRESENT</h5>
+          <p>Being a part of Computer Association (CA) at PCACS as a First Year CS student has been one of the most rewarding experiences of my academic journey. Out of many applicants, only 22 were selected, and I am grateful to be among them.</p>
+          <p>I have been assigned to the Social Media Department, where I contribute towards digital communication, branding, and engagement. CA, to me, is like a tree, built on one strong root of teamwork and vision, branching out into various departments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <div class="section-title">
+      <h2>Portfolio</h2>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="portfolio-content">
+          <h3>Tiara Jewels (UI/UX Design)</h3>
+          <p>This is my first UI/UX design project, created in Figma for a fictional jewelry brand named Tiara Jewels. The concept behind "Tiara" connects diamonds, jewels, and gold, symbolizing elegance and fusion.</p>
+          <p>The design focuses on a modern, user-friendly interface with smooth navigation, product highlights, and a premium shopping experience.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-content">
+          <h3>PyUmbra: Weather Forecast App</h3>
+          <p>PyUmbra is a Python-based project designed as an umbrella framework that combines multiple weather and environment-related features into a single reliable solution.</p>
+          <p>Just as an umbrella protects us from uncertain weather, PyUmbra provides users with comprehensive insights into climatic and environmental conditions. Python + HTML/CSS project showing real-time weather forecasts.</p>
+        </div>
+         </div>
+        <div class="portfolio-item">
+        <div class="portfolio-content">
+          <h3>Lifestyle Analyzer</h3>
+          <p>This website was developed using HTML, CSS, and JavaScript. The project was built with ChatGPT’s coding assistance, while the structure, design planning, and UI/UX concept were completely done by Krishna K Singh.</p>
+          <p>This is a sample project created during my semester break to apply concepts I learned from Python, DBMS, and Statistical Mathematics (R programming) — combining data visualization and user interaction into one dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="section-title">
+      <h2>Skills & Expertise</h2>
+    </div>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Technical Skills</h3>
+        <div class="skill-grid">
+          <div class="skill-item">UI/UX Design</div>
+          <div class="skill-item">HTML5 & CSS</div>
+          <div class="skill-item">Python</div>
+          <div class="skill-item">SQL</div>
+          <div class="skill-item">R Programming Language</div>
+<div class="skill-item">Robotics</div>
+          <div class="skill-item">Oracle Database</div>
+          <div class="skill-item">Cloud Computing</div>
+          <div class="skill-item">Prompt Engineering</div>
+<div class="skill-item">AI/ML</div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Creative Skills</h3>
+        <div class="skill-grid">
+<div class="skill-item">Event Handling</div>
+<div class="skill-item">Writing</div>
+          <div class="skill-item">Graphic Design</div>
+<div class="skill-item">Storytelling & Expression</div>
+<div class="skill-item">Design Sense</div>
+<div class="skill-item">Curiosity & Idea Generation</div>
+          <div class="skill-item">Video Editing</div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3>Soft Skills</h3>
+        <div class="skill-grid">
+          <div class="skill-item">Leadership</div>
+          <div class="skill-item">Communication</div>
+          <div class="skill-item">Teamwork</div>
+<div class="skill-item">Time Management</div>
+          <div class="skill-item">Teaching</div>
+<div class="skill-item">Empathy & Kindness</div>
+<div class="skill-item">Adaptability</div>
+<div class="skill-item">Confidence with Humility</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="section-title">
+      <h2>Services</h2>
+    </div>
+    <div class="about-content fade-in">
+      <p>I am currently a student and open to freelance or internship opportunities in cloud computing, UI/UX design, and data analytics. Feel free to reach out for collaborations or opportunities.</p>
+    </div>
+  </section>
+
+ <!-- Certificate/Courses/License Section -->
+  <section id="services">
+    <div class="section-title">
+      <h2>Note</h2>
+    </div>
+    <div class="about-content fade-in">
+      <p>To view my Certificates, Courses, Licenses, and Achievements, please visit my LinkedIn profile linked below in Contact Section.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-title">
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-content">
+      <div class="contact-info fade-in">
+        <h3>Get In Touch</h3>
+        <ul class="contact-details">
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:i.krishnasinghh@gmail.com">i.krishnasinghh@gmail.com</a>
+          </li>
+          <li>
+            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank">LinkedIn: ikrishnasinghh</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
   <div class="social-links">
     <a href="https://www.linkedin.com/in/krishna-k-singh/" target="_blank" title="LinkedIn">
       <i class="fab fa-linkedin"></i>
@@ -31,5 +1067,83 @@
       <i class="fas fa-f"></i>
     </a>
   </div>
-  <p>&copy; 2025 Krishna K Singh. All rights reserved.</p>
-</footer>
+  <p>© 2025 Krishna K Singh. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Function to check if element is in viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+    
+    // Add visible class to elements when in viewport
+    function checkVisibility() {
+      const elements = document.querySelectorAll('.fade-in, .timeline-item, .portfolio-item, .skill-category');
+      
+      elements.forEach(element => {
+        if (isInViewport(element)) {
+          element.classList.add('visible');
+        }
+      });
+    }
+    
+    // Check on load and scroll
+    window.addEventListener('load', checkVisibility);
+    window.addEventListener('scroll', checkVisibility);
+    
+    // Add random floating icons
+    function addFloatingIcons() {
+      const icons = ['fa-code', 'fa-cloud', 'fa-paint-brush', 'fa-database', 'fa-chart-line', 'fa-mobile', 'fa-server', 'fa-brain'];
+      const container = document.querySelector('.floating-icons');
+      
+      for (let i = 0; i < 12; i++) {
+        const icon = document.createElement('div');
+        icon.className = 'floating-icon';
+        icon.innerHTML = `<i class="fas ${icons[Math.floor(Math.random() * icons.length)]}"></i>`;
+        
+        // Random position
+        const top = Math.random() * 100;
+        const left = Math.random() * 100;
+        const delay = Math.random() * 5;
+        
+        icon.style.top = `${top}%`;
+        icon.style.left = `${left}%`;
+        icon.style.animationDelay = `${delay}s`;
+        
+        container.appendChild(icon);
+      }
+    }
+    
+    // Mobile Navigation
+    const navToggle = document.getElementById('nav-toggle');
+    const closeNav = document.getElementById('close-nav');
+    const mobileNav = document.getElementById('mobile-nav');
+    const overlay = document.getElementById('nav-overlay');
+    
+    function openMobileNav() {
+      mobileNav.classList.add('active');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMobileNav() {
+      mobileNav.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+    
+    navToggle.addEventListener('click', openMobileNav);
+    closeNav.addEventListener('click', closeMobileNav);
+    overlay.addEventListener('click', closeMobileNav);
+    
+    // Initialize floating icons
+    addFloatingIcons();
+  </script>
+</body>
+</html>
