@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Krishna Kamlesh Singh — Interactive Bento Studio</title>
+  <meta name="title" content="Krishna Kamlesh Singh — Portfolio">
+  <meta name="description"
+    content="Portfolio of Krishna Kamlesh Singh: BSc Computer Science Student (SGPA 9.82+), Pillai University National Face 2026, Alegria 2026 Host, 2+ Hackathon Winner, Cloud & Vibe Coder.">
+  <meta name="author" content="Krishna Kamlesh Singh">
+  <meta name="keywords"
+    content="Krishna Kamlesh Singh, Portfolio, Vibe Coding, Cloud Engineering, Computer Science, Pillai University, PCACS, Hackathon Winner, Podcast Host, Anchor, Kuhoo, Kaato Fruit Arcade">
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ikrishhsinghh.github.io/Portfolio/">
+  <meta property="og:title" content="Krishna Kamlesh Singh — Portfolio">
+  <meta property="og:description"
+    content="BSc CS Student | SGPA 9.82+ | Cloud Computing | AI-Prototyping | Vibe Coding | National Face for 2026 Admission Campaign">
+  <meta property="og:image" content="assets/images/krishna-hero.jpg">
+
+  <!-- Mobile Theme Color -->
+  <meta name="theme-color" content="#090A0F">
+
+  <!-- Google Fonts: Syne & Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Ambient backdrop lights -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- Global Header Navigation -->
+  <header class="bento-header" id="bento-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-name-link" aria-label="Krishna Kamlesh Singh">
+        <span class="brand-text">Krishna Kamlesh Singh</span>
+        <span class="active-beacon" title="Available for projects & hackathons"></span>
+      </a>
+
+      <!-- Desktop View Switcher Tabs -->
+      <nav class="bento-tabs-nav" aria-label="View Switcher">
+        <button class="view-tab active" data-view="overview"><i class="fa-solid fa-grid-2"></i> Overview</button>
+        <button class="view-tab" data-view="about"><i class="fa-solid fa-user"></i> About</button>
+        <button class="view-tab" data-view="projects"><i class="fa-solid fa-shapes"></i> Projects</button>
+        <button class="view-tab" data-view="career"><i class="fa-solid fa-briefcase"></i> Career & Stage</button>
+        <button class="view-tab" data-view="skills"><i class="fa-solid fa-brain"></i> Skills</button>
+        <button class="view-tab" data-view="honors"><i class="fa-solid fa-trophy"></i> Honors</button>
+        <button class="view-tab" data-view="contact"><i class="fa-solid fa-paper-plane"></i> Contact</button>
+      </nav>
+
+      <div class="header-right-actions">
+        <!-- Theme Toggle -->
+        <button class="icon-toggle-btn" id="theme-btn" aria-label="Toggle theme" title="Toggle theme">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+
+        <!-- Social Icons (Desktop only) -->
+        <a href="https://github.com/ikrishhsinghh" target="_blank" rel="noopener noreferrer"
+          class="icon-toggle-btn desktop-social" aria-label="GitHub" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer"
+          class="icon-toggle-btn desktop-social" aria-label="LinkedIn" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <!-- Direct Email Button -->
+        <a href="mailto:i.krishnasinghh@gmail.com" class="btn btn-primary btn-sm desktop-only">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>Email Me</span>
+        </a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-menu-trigger" id="mobile-menu-trigger" aria-label="Open mobile menu"
+          aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer-overlay" id="mobile-drawer-overlay">
+      <div class="mobile-drawer-body">
+        <ul class="mobile-drawer-tabs">
+          <li><button class="mobile-tab-btn active" data-view="overview"><i class="fa-solid fa-grid-2"></i> 01 /
+              Overview Studio</button></li>
+          <li><button class="mobile-tab-btn" data-view="about"><i class="fa-solid fa-user"></i> 02 / About
+              Krishna</button></li>
+          <li><button class="mobile-tab-btn" data-view="projects"><i class="fa-solid fa-shapes"></i> 03 /
+              Projects</button></li>
+          <li><button class="mobile-tab-btn" data-view="career"><i class="fa-solid fa-briefcase"></i> 04 / Career &
+              Stage</button></li>
+          <li><button class="mobile-tab-btn" data-view="skills"><i class="fa-solid fa-brain"></i> 05 / Skills &
+              Polyglot</button></li>
+          <li><button class="mobile-tab-btn" data-view="honors"><i class="fa-solid fa-trophy"></i> 06 / Honors &
+              Hackathons</button></li>
+          <li><button class="mobile-tab-btn" data-view="contact"><i class="fa-solid fa-paper-plane"></i> 07 / Direct
+              Contact</button></li>
+        </ul>
+        <div class="mobile-drawer-cta">
+          <a href="mailto:i.krishnasinghh@gmail.com" class="btn btn-primary w-full">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email Directly</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer"
+            class="btn btn-outline w-full">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="bento-main">
+    <!-- ==================== HERO TYPOGRAPHIC HEADER ==================== -->
+    <section class="bento-hero-section" id="hero">
+      <div class="container">
+        <div class="bento-hero-header">
+          <h1 class="hero-full-name">
+            Krishna <span class="name-highlight">Kamlesh Singh</span>
+          </h1>
+
+          <div class="hero-rotator-line">
+            <span class="rotator-lead">Specializing in </span>
+            <span class="rotator-text" id="rotator-text">Vibe Coding</span>
+            <span class="rotator-cursor">|</span>
+          </div>
+
+          <p class="hero-summary-text">
+            Second-year Computer Science student at Pillai University (<strong>SGPA 9.82+</strong>).
+            Blending <strong>Vibe Coding</strong>, <strong>Camera-Based Web Apps</strong>, and <strong>Cloud
+              Computing</strong>
+            with stage leadership as <strong>National Face 2026</strong>, <strong>Alegria Host</strong>, and
+            <strong>University Podcast Host</strong>.
+          </p>
+
+          <div class="hero-quick-actions">
+            <a href="mailto:i.krishnasinghh@gmail.com" class="btn btn-primary">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Email Krishna</span>
+            </a>
+            <button class="btn btn-outline" data-switch="about">
+              <i class="fa-solid fa-user"></i>
+              <span>About Krishna</span>
+            </button>
+            <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+            <button class="btn btn-ghost copy-trigger" data-copy="i.krishnasinghh@gmail.com" title="Copy Email">
+              <i class="fa-regular fa-copy"></i>
+              <span>Copy Email</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 1: INTERACTIVE BENTO STUDIO (OVERVIEW) ==================== -->
+    <section class="view-panel active" id="view-overview">
+      <div class="container">
+        <div class="bento-grid-dashboard">
+
+          <!-- TILE 1: PODIUM PORTRAIT & STAGE COMMAND (Large Vertical Bento) -->
+          <div class="bento-tile tile-portrait" id="bento-portrait">
+            <div class="tile-glow"></div>
+            <div class="portrait-crop-frame">
+              <img src="krishna-hero.jpg" alt="Krishna Kamlesh Singh speaking at the podium at Pillai University"
+                class="portrait-img" loading="eager">
+              <div class="portrait-overlay"></div>
+            </div>
+            <div class="portrait-badge-overlay">
+              <div class="badge-title">
+                <span class="badge-dot"></span>
+                <strong>Keynote Stage & Podcast Host</strong>
+              </div>
+              <span class="badge-sub">Pillai University • National Face 2026</span>
+            </div>
+          </div>
+
+          <!-- TILE 2: FEATURED LIVE WORK — KUHOO (Gesture Audio) -->
+          <div class="bento-tile tile-kuhoo">
+            <div class="tile-top-row">
+              <span class="tile-tag tag-purple"><i class="fa-solid fa-music"></i> Featured Web Audio</span>
+              <span class="tile-year">Sep 2026</span>
+            </div>
+            <h3 class="tile-title">Kuhoo — Gesture-Based Web Music</h3>
+            <p class="tile-desc">
+              Gesture-based interactive web music experience. Create sounds through touch and gesture controls with
+              real-time Web Audio synthesis.
+            </p>
+            <!-- Animated audio bars preview -->
+            <div class="audio-wave-visualizer" aria-hidden="true">
+              <span class="wave-bar b1"></span>
+              <span class="wave-bar b2"></span>
+              <span class="wave-bar b3"></span>
+              <span class="wave-bar b4"></span>
+              <span class="wave-bar b5"></span>
+              <span class="wave-bar b6"></span>
+              <span class="wave-bar b7"></span>
+              <span class="wave-bar b8"></span>
+            </div>
+            <div class="tile-bottom-row">
+              <div class="tile-pills">
+                <span>Web Audio</span>
+                <span>Vercel</span>
+                <span>Vibe Coding</span>
+              </div>
+              <a href="https://kuhoo-two.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>Launch Kuhoo</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- TILE 3: FEATURED GAME — KAATO FRUIT ARCADE -->
+          <div class="bento-tile tile-kaato">
+            <div class="tile-top-row">
+              <span class="tile-tag tag-amber"><i class="fa-solid fa-gamepad"></i> Browser Game</span>
+              <span class="tile-year">Jul–Aug 2026</span>
+            </div>
+            <h3 class="tile-title">Kaato Fruit Arcade — Web Arcade</h3>
+            <p class="tile-desc">
+              Browser-based arcade game built with custom physics, responsive touch/mouse controls, and modern vibe
+              coding.
+            </p>
+            <div class="arcade-preview-strip">
+              <span class="arcade-icon">🍉</span>
+              <span class="arcade-icon">🍍</span>
+              <span class="arcade-icon">🍓</span>
+              <span class="arcade-icon">⚡</span>
+            </div>
+            <div class="tile-bottom-row">
+              <div class="tile-pills">
+                <span>HTML5 Canvas</span>
+                <span>Vibe Coding</span>
+                <span>Game Dev</span>
+              </div>
+              <a href="https://ikrishhsinghh.github.io/KAATO-FRUIT-ARCADE/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>Play Game</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- TILE 4: ACADEMIC SCORECARD -->
+          <div class="bento-tile tile-metric">
+            <span class="tile-tag tag-emerald"><i class="fa-solid fa-graduation-cap"></i> Academics</span>
+            <div class="large-metric">9.82<span class="accent-plus">+</span></div>
+            <h4 class="metric-title">Current SGPA</h4>
+            <p class="metric-desc">BSc Computer Science @ Pillai College of Arts, Commerce & Science (2025–2028).</p>
+          </div>
+
+          <!-- TILE 5: HACKATHON PODIUM WINS -->
+          <div class="bento-tile tile-hackathons">
+            <span class="tile-tag tag-cyan"><i class="fa-solid fa-trophy"></i> Competitions</span>
+            <div class="large-metric">2<span class="accent-plus">+</span> <span class="metric-unit-tag">Wins</span>
+            </div>
+            <h4 class="metric-title">Hackathon Champion</h4>
+            <div class="hackathon-badge-list">
+              <div class="h-badge">🥈 <strong>IEEE Cognithon</strong> 2nd Place Winner</div>
+              <div class="h-badge">🥈 <strong>SIH Internal</strong> 2nd Place Winner</div>
+            </div>
+          </div>
+
+          <!-- TILE 6: TECH ENGINE & VIBE CODING -->
+          <div class="bento-tile tile-tech-stack">
+            <div class="tile-top-row">
+              <span class="tile-tag tag-indigo"><i class="fa-solid fa-code"></i> Engineering Engine</span>
+              <button class="view-more-link" data-switch="skills">View All Skills →</button>
+            </div>
+            <h3 class="tile-title">Core Systems & Vibe Coding</h3>
+            <div class="tech-chip-grid">
+              <span><i class="fa-brands fa-python"></i> Python</span>
+              <span><i class="fa-solid fa-diagram-project"></i> DSA</span>
+              <span><i class="fa-brands fa-linux"></i> Linux</span>
+              <span><i class="fa-solid fa-microchip"></i> OS</span>
+              <span><i class="fa-brands fa-react"></i> React.js</span>
+              <span><i class="fa-solid fa-bolt"></i> Vibe Coding</span>
+              <span><i class="fa-solid fa-camera"></i> Camera Web Apps</span>
+              <span><i class="fa-solid fa-cloud"></i> Cloud</span>
+              <span><i class="fa-brands fa-figma"></i> Figma</span>
+              <span><i class="fa-solid fa-chart-column"></i> Data Viz</span>
+            </div>
+          </div>
+
+          <!-- TILE 7: LEADERSHIP & KEYNOTE STAGES -->
+          <div class="bento-tile tile-leadership">
+            <div class="tile-top-row">
+              <span class="tile-tag tag-amber"><i class="fa-solid fa-microphone-lines"></i> Stage & Leadership</span>
+              <button class="view-more-link" data-switch="career">View Career →</button>
+            </div>
+            <h3 class="tile-title">The Human Voice</h3>
+            <div class="leadership-highlights">
+              <div class="lead-item">
+                <i class="fa-solid fa-podcast text-amber"></i>
+                <div>
+                  <strong>Host — Pillai University Podcast</strong>
+                  <span>Aug 2026 – Present • Thought Leadership</span>
+                </div>
+              </div>
+              <div class="lead-item">
+                <i class="fa-solid fa-users text-indigo"></i>
+                <div>
+                  <strong>Head — Computer Association</strong>
+                  <span>Feb 2026 – Present • Pillai University PCACS</span>
+                </div>
+              </div>
+              <div class="lead-item">
+                <i class="fa-solid fa-bullhorn text-cyan"></i>
+                <div>
+                  <strong>Official Anchor — Alegria 2026</strong>
+                  <span>Festival of Joy Mega-Stages</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TILE 8: DIRECT CONNECT TILE -->
+          <div class="bento-tile tile-connect">
+            <span class="tile-tag tag-pink"><i class="fa-solid fa-paper-plane"></i> Direct Connect</span>
+            <h3 class="tile-title">Let's Collaborate</h3>
+            <p class="tile-desc">Available for hackathons, Cloud/AI initiatives, keynote anchoring, and custom web
+              builds.</p>
+            <div class="connect-btn-grid">
+              <a href="mailto:i.krishnasinghh@gmail.com" class="btn btn-primary w-full">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email Directly</span>
+              </a>
+              <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline w-full">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+              </a>
+              <button class="btn btn-ghost copy-trigger w-full" data-copy="i.krishnasinghh@gmail.com">
+                <i class="fa-regular fa-copy"></i>
+                <span>Copy Address</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 2: ABOUT SECTION ==================== -->
+    <section class="view-panel" id="view-about">
+      <div class="container">
+
+        <!-- About Hero Bento (Image + Narrative Story) -->
+        <div class="about-hero-bento">
+
+          <!-- Visual Media Frame with Podcast Studio Image -->
+          <div class="about-media-card">
+            <div class="about-photo-wrap">
+              <img src="krishna-podcast.jpg"
+                alt="Krishna Singh in the Beyond Curriculum podcast recording studio at Pillai University"
+                class="about-studio-photo" loading="eager">
+              <div class="about-photo-overlay"></div>
+            </div>
+
+            <div class="about-photo-badge">
+              <div class="badge-icon-pill">
+                <i class="fa-solid fa-podcast text-amber"></i>
+                <span class="live-pulse-dot"></span>
+              </div>
+              <div class="badge-details">
+                <strong>Host — Beyond Curriculum Podcast</strong>
+                <span>Pillai University Studio • Thought Leadership</span>
+              </div>
+            </div>
+
+            <div class="about-motto-pill">
+              <i class="fa-solid fa-repeat"></i>
+              <span>Build. Experiment. Improve. Repeat.</span>
+            </div>
+          </div>
+
+          <!-- Narrative Introduction -->
+          <div class="about-story-card">
+            <span class="panel-kicker">02 / The Person Behind The Code</span>
+            <h2 class="about-main-title">
+              Curious by Nature. <br><span class="name-highlight">Builder by Choice.</span>
+            </h2>
+
+            <div class="about-bio-body">
+              <p class="bio-highlight">
+                I’m <strong>Krishna Singh</strong>, a second-year Computer Science student with a strong interest in
+                <strong>Cloud Engineering</strong>, <strong>Data Science</strong>, <strong>Artificial
+                  Intelligence</strong>,
+                and technology-driven innovation. I’m someone who is constantly curious about how things work, how they
+                can be improved,
+                and how an idea can be transformed into something people can actually use.
+              </p>
+
+              <p>
+                My journey in technology is driven by <strong>experimentation</strong>. I love building new things, but
+                I’m equally interested in taking an existing idea, understanding its limitations, and reimagining it
+                with better functionality, UI/UX, performance, and overall user experience. One of the approaches I
+                enjoy most is <strong>vibe coding</strong> — using AI-assisted development tools to rapidly turn ideas
+                into functional prototypes and applications while combining them with my own problem-solving, design,
+                and technical understanding.
+              </p>
+
+              <div class="about-quick-metrics">
+                <div class="q-metric">
+                  <span class="q-num">9.82<small>+</small></span>
+                  <span class="q-lbl">Current SGPA</span>
+                </div>
+                <div class="q-metric">
+                  <span class="q-num">2<small>nd</small></span>
+                  <span class="q-lbl">SIH Hackathon</span>
+                </div>
+                <div class="q-metric">
+                  <span class="q-num">Head</span>
+                  <span class="q-lbl">Computer Assoc.</span>
+                </div>
+                <div class="q-metric">
+                  <span class="q-num">Host</span>
+                  <span class="q-lbl">Univ. Podcast</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ==================== GUIDING PHILOSOPHY & CORE MANTRAS ==================== -->
+        <div class="about-mantras-container">
+
+          <!-- Mantra 1: The Inner Light -->
+          <div class="mantra-card mantra-light">
+            <div class="mantra-glow amber-glow"></div>
+            <div class="mantra-header-row">
+              <div class="mantra-glyph-wrap bg-amber">
+                <i class="fa-solid fa-sun"></i>
+              </div>
+              <span class="mantra-badge-tag"><i class="fa-solid fa-sparkles"></i> Guiding Light</span>
+            </div>
+            <blockquote class="mantra-quote-text">
+              Happiness can be found, even in the darkest of times, if one only remembers to turn on the light. - <span
+                class="mantra-em-amber">that one light exists within us!</span>
+            </blockquote>
+          </div>
+
+          <!-- Mantra 2: The Creed of Love -->
+          <div class="mantra-card mantra-creed">
+            <div class="mantra-glow pink-glow"></div>
+            <div class="mantra-header-row">
+              <div class="mantra-glyph-wrap bg-pink">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <span class="mantra-badge-tag"><i class="fa-solid fa-compass"></i> Personal Creed</span>
+            </div>
+            <blockquote class="mantra-quote-text">
+              Be Bold, Be Real, Be Kind, Be Love - <span class="mantra-em-pink">I'm Love</span>
+            </blockquote>
+          </div>
+
+        </div>
+
+        <!-- Dimension Pillars Grid (Interactive Bento Cards) -->
+        <div class="about-dimensions-grid">
+
+          <!-- Pillar 1: Academic & Data Foundations -->
+          <div class="dimension-card">
+            <div class="d-icon-header">
+              <div class="d-bubble cyan-bubble"><i class="fa-solid fa-graduation-cap"></i></div>
+              <span class="d-tag tag-cyan"><i class="fa-solid fa-chart-line"></i> Academics & Analytics</span>
+            </div>
+            <h3 class="d-title">Data as a Narrative</h3>
+            <p class="d-text">
+              Building my foundation across Computer Science with a focus on Cloud Engineering, Data Science, Data
+              Analytics, Python, Data Structures, databases, and software development.
+            </p>
+            <blockquote class="d-quote">
+              “I enjoy working with data not just as numbers, but as something that can reveal patterns, support
+              decisions, and tell meaningful stories.”
+            </blockquote>
+            <div class="d-chips">
+              <span>Cloud Eng</span>
+              <span>Data Science</span>
+              <span>Python DSA</span>
+              <span>SQL Analytics</span>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Applied Engineering & Projects -->
+          <div class="dimension-card">
+            <div class="d-icon-header">
+              <div class="d-bubble indigo-bubble"><i class="fa-solid fa-rocket"></i></div>
+              <span class="d-tag tag-indigo"><i class="fa-solid fa-gears"></i> Applied Engineering</span>
+            </div>
+            <h3 class="d-title">Learning by Shipping</h3>
+            <p class="d-text">
+              I strongly believe that learning becomes more meaningful when applied. Shipped real-world systems like
+              <strong>RAAHAT</strong> (data-structure emergency response), <strong>TRAVORA</strong> (dynamic tour
+              operations), and experimental web applications.
+            </p>
+            <blockquote class="d-quote">
+              “Learning becomes much more meaningful when applied — constantly challenging myself to build better
+              solutions.”
+            </blockquote>
+            <div class="d-chips">
+              <span>RAAHAT</span>
+              <span>TRAVORA</span>
+              <span>Kuhoo Audio</span>
+              <span>Kaato Arcade</span>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Hackathons & DyutiX -->
+          <div class="dimension-card">
+            <div class="d-icon-header">
+              <div class="d-bubble emerald-bubble"><i class="fa-solid fa-trophy"></i></div>
+              <span class="d-tag tag-emerald"><i class="fa-solid fa-medal"></i> Hackathons & Pressure</span>
+            </div>
+            <h3 class="d-title">Team DyutiX & High Stakes</h3>
+            <p class="d-text">
+              Secured <strong>Second Position in the SIH Internal Hackathon</strong> with team DyutiX, alongside
+              national-level hackathons solving real-world problem statements.
+            </p>
+            <blockquote class="d-quote">
+              “These experiences have taught me how to work under pressure, communicate ideas, divide responsibilities,
+              iterate quickly, and keep building.”
+            </blockquote>
+            <div class="d-chips">
+              <span>SIH Internal</span>
+              <span>Team DyutiX</span>
+              <span>IEEE Cognithon</span>
+              <span>Rapid Iteration</span>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Student Leadership -->
+          <div class="dimension-card">
+            <div class="d-icon-header">
+              <div class="d-bubble amber-bubble"><i class="fa-solid fa-users"></i></div>
+              <span class="d-tag tag-amber"><i class="fa-solid fa-users-gear"></i> Student Leadership</span>
+            </div>
+            <h3 class="d-title">Student Head, Computer Association</h3>
+            <p class="d-text">
+              Directing large-scale technical flagships such as <strong>BitFest</strong>, coordinating workshops,
+              hackathons, and student initiatives across the School of Computing at Pillai University.
+            </p>
+            <blockquote class="d-quote">
+              “Leadership is not simply about holding a position; it is about taking responsibility, bringing people
+              together, and making things happen.”
+            </blockquote>
+            <div class="d-chips">
+              <span>BitFest 2026</span>
+              <span>Tech Flagships</span>
+              <span>Workshops</span>
+              <span>Student Body</span>
+            </div>
+          </div>
+
+          <!-- Pillar 5: Podcasting & Human Connection -->
+          <div class="dimension-card">
+            <div class="d-icon-header">
+              <div class="d-bubble pink-bubble"><i class="fa-solid fa-microphone-lines"></i></div>
+              <span class="d-tag tag-pink"><i class="fa-solid fa-podcast"></i> Media & Podcasting</span>
+            </div>
+            <h3 class="d-title">The Beyond Curriculum Podcast</h3>
+            <p class="d-text">
+              Hosting conversations with accomplished professionals, including <strong>Dr. Sandeep Joshi</strong>
+              (Principal, Pillai College of Engineering), exploring technical depth and student growth.
+            </p>
+            <blockquote class="d-quote">
+              “Podcasting has helped me develop a different kind of technical skill — the ability to listen, ask
+              meaningful questions, and bring conversations to life.”
+            </blockquote>
+            <div class="d-chips">
+              <span>Principal Episode</span>
+              <span>Thought Leadership</span>
+              <span>Studio Host</span>
+              <span>Audio Tech</span>
+            </div>
+          </div>
+
+          <!-- Pillar 6: Creative Design & Public Speaking -->
+          <div class="dimension-card">
+            <div class="d-icon-header">
+              <div class="d-bubble purple-bubble"><i class="fa-solid fa-palette"></i></div>
+              <span class="d-tag tag-purple"><i class="fa-solid fa-wand-magic-sparkles"></i> Design &
+                Articulation</span>
+            </div>
+            <h3 class="d-title">Bridging Code & Aesthetics</h3>
+            <p class="d-text">
+              Fusing software engineering with Graphic Design, UI/UX in Figma, visual branding, and keynote stage
+              anchoring. Designing interfaces that are not only functional, but intuitive and delightful.
+            </p>
+            <blockquote class="d-quote">
+              “Whether I’m designing an interface, speaking on stage, or writing code, my goal is always to communicate
+              ideas clearly and create an impact.”
+            </blockquote>
+            <div class="d-chips">
+              <span>Figma Systems</span>
+              <span>Keynote Anchoring</span>
+              <span>UI/UX Design</span>
+              <span>Visual Branding</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- "Currently Focused On" Matrix -->
+        <div class="about-focus-matrix-card">
+          <div class="focus-matrix-header">
+            <div>
+              <span class="panel-kicker">Active Roadmap</span>
+              <h3 class="focus-title">Currently Focused On</h3>
+            </div>
+            <span class="focus-motto-tag">Continuous Evolution</span>
+          </div>
+
+          <div class="focus-checklist-grid">
+            <div class="focus-item">
+              <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+              <span>Cloud Engineering and scalable application development</span>
+            </div>
+            <div class="focus-item">
+              <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+              <span>Data Science, Data Analytics, and visualization</span>
+            </div>
+            <div class="focus-item">
+              <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+              <span>AI-assisted development and vibe coding</span>
+            </div>
+            <div class="focus-item">
+              <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+              <span>Full-stack and front-end development</span>
+            </div>
+            <div class="focus-item">
+              <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+              <span>UI/UX and Graphic Design</span>
+            </div>
+            <div class="focus-item">
+              <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+              <span>Hackathons and real-world problem solving</span>
+            </div>
+            <div class="focus-item">
+              <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+              <span>Technology leadership and student communities</span>
+            </div>
+            <div class="focus-item">
+              <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+              <span>Public speaking, anchoring, podcasting, and content creation</span>
+            </div>
+            <div class="focus-item">
+              <div class="check-icon"><i class="fa-solid fa-check"></i></div>
+              <span>Building, improving, and experimenting with new ideas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Open for Opportunities Call-to-Action Banner -->
+        <div class="about-cta-banner">
+          <div class="cta-inner-row">
+            <div class="cta-text-wrap">
+              <span class="cta-pre">Looking Forward</span>
+              <h3 class="cta-heading">Open to Internships, Hackathons & Collaborations</h3>
+              <p class="cta-sub">
+                Always curious, always building, and always looking for the next thing I can learn, create, or improve.
+                Open to technology communities, creative projects, and opportunities where I can contribute and build
+                something meaningful.
+              </p>
+            </div>
+            <div class="cta-buttons-wrap">
+              <a href="mailto:i.krishnasinghh@gmail.com" class="btn btn-primary">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Get in Touch</span>
+              </a>
+              <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>Connect on LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 3: PROJECTS SHOWCASE ==================== -->
+    <section class="view-panel" id="view-projects">
+      <div class="container">
+        <div class="panel-heading">
+          <span class="panel-kicker">03 / Selected Works</span>
+          <h2 class="panel-title">Projects & <span class="name-highlight">Vibe Coding</span></h2>
+          <p class="panel-lead">Explore 9 shipped works across gesture web audio, browser games, full-stack systems, and
+            UX.</p>
+
+          <div class="panel-filter-bar" role="tablist">
+            <button class="filter-pill active" data-proj-filter="all">All Projects</button>
+            <button class="filter-pill" data-proj-filter="interactive">Interactive & Games</button>
+            <button class="filter-pill" data-proj-filter="ai-soft">AI & Web Apps</button>
+            <button class="filter-pill" data-proj-filter="ui-ux">UI/UX & Design</button>
+            <button class="filter-pill" data-proj-filter="data">Data & Analytics</button>
+          </div>
+        </div>
+
+        <div class="projects-card-grid">
+          <!-- 1: Kuhoo -->
+          <article class="project-bento-card" data-proj-cat="interactive ai-soft">
+            <div class="p-top">
+              <span class="p-tag tag-purple"><i class="fa-solid fa-music"></i> Gesture Audio</span>
+              <span class="p-date">Sep 2026</span>
+            </div>
+            <h3 class="p-name">Kuhoo — Gesture-Based Web Music Experience</h3>
+            <p class="p-desc">Interactive touch & gesture web audio experience. Create music in-browser with responsive
+              sound synthesis.</p>
+            <div class="p-tech">
+              <span>Web Audio API</span>
+              <span>JavaScript</span>
+              <span>Vercel</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://kuhoo-two.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>Live App</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 2: Kaato Fruit Arcade -->
+          <article class="project-bento-card" data-proj-cat="interactive">
+            <div class="p-top">
+              <span class="p-tag tag-amber"><i class="fa-solid fa-gamepad"></i> Browser Game</span>
+              <span class="p-date">Jul–Aug 2026</span>
+            </div>
+            <h3 class="p-name">Kaato Fruit Arcade — Browser Arcade Game</h3>
+            <p class="p-desc">Interactive browser arcade game with custom physics, responsive controls, animations, and
+              fresh UI/UX via vibe coding.</p>
+            <div class="p-tech">
+              <span>HTML5 Canvas</span>
+              <span>Game Physics</span>
+              <span>Vibe Coding</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://ikrishhsinghh.github.io/KAATO-FRUIT-ARCADE/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>Play Game</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 3: Tiara Jewels -->
+          <article class="project-bento-card" data-proj-cat="ui-ux">
+            <div class="p-top">
+              <span class="p-tag tag-pink"><i class="fa-brands fa-figma"></i> UI/UX Design</span>
+              <span class="p-date">Figma</span>
+            </div>
+            <h3 class="p-name">Tiara Jewels — Luxury E-Commerce System</h3>
+            <p class="p-desc">Modern luxury jewelry e-commerce experience designed in Figma with comprehensive design
+              systems & checkout flow.</p>
+            <div class="p-tech">
+              <span>Figma</span>
+              <span>UI/UX</span>
+              <span>Design System</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://www.figma.com/community/file/1539576447822543845/tiara-jewels" target="_blank"
+                rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <span>Figma File</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 4: PyUmbra Weather -->
+          <article class="project-bento-card" data-proj-cat="ai-soft">
+            <div class="p-top">
+              <span class="p-tag tag-blue"><i class="fa-brands fa-python"></i> Weather Intel</span>
+              <span class="p-date">Live App</span>
+            </div>
+            <h3 class="p-name">PyUmbra — Weather Intelligence Solution</h3>
+            <p class="p-desc">Python-based meteorological web application with multi-day forecasting, atmospheric
+              telemetry, and live alerts.</p>
+            <div class="p-tech">
+              <span>Python</span>
+              <span>REST API</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://ikrishhsinghh.github.io/PyUmbra/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>Live Demo</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 5: Lifestyle Analyzer -->
+          <article class="project-bento-card" data-proj-cat="data ui-ux">
+            <div class="p-top">
+              <span class="p-tag tag-emerald"><i class="fa-solid fa-chart-pie"></i> Data Dashboard</span>
+              <span class="p-date">Live App</span>
+            </div>
+            <h3 class="p-name">Lifestyle Analyzer — Habit & Wellness Telemetry</h3>
+            <p class="p-desc">Interactive dashboard transforming personal lifestyle and wellness data into dynamic
+              visual charts.</p>
+            <div class="p-tech">
+              <span>JavaScript</span>
+              <span>Data Viz</span>
+              <span>UX Design</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://ikrishhsinghh.github.io/Lifestyle-Analyzer/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>Live Demo</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 6: LinkedIn / Resume Optimizer -->
+          <article class="project-bento-card" data-proj-cat="ai-soft">
+            <div class="p-top">
+              <span class="p-tag tag-amber"><i class="fa-solid fa-wand-magic-sparkles"></i> Heuristic Auditor</span>
+              <span class="p-date">Live App</span>
+            </div>
+            <h3 class="p-name">LinkedIn & Resume Heuristic Optimizer</h3>
+            <p class="p-desc">Client-side audit web app providing instant suggestions and scoring without server data
+              uploads for total privacy.</p>
+            <div class="p-tech">
+              <span>JavaScript</span>
+              <span>Client-Side</span>
+              <span>UX Tool</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://ikrishhsinghh.github.io/Linkedin-Auditor/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>Live Demo</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 7: ReportGen 2.0 Web -->
+          <article class="project-bento-card" data-proj-cat="ai-soft">
+            <div class="p-top">
+              <span class="p-tag tag-purple"><i class="fa-solid fa-database"></i> Full-Stack Web</span>
+              <span class="p-date">PHP/MySQL</span>
+            </div>
+            <h3 class="p-name">ReportGen 2.0 — Academic Record Management</h3>
+            <p class="p-desc">Full-stack academic record system with automated total mark calculation, validation
+              alerts, and relational MySQL database.</p>
+            <div class="p-tech">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://github.com/ikrishhsinghh/ReportGen-2.O.git" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline btn-sm">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 8: ReportGen Desktop GUI -->
+          <article class="project-bento-card" data-proj-cat="ai-soft">
+            <div class="p-top">
+              <span class="p-tag tag-blue"><i class="fa-brands fa-java"></i> Java Swing GUI</span>
+              <span class="p-date">Desktop App</span>
+            </div>
+            <h3 class="p-name">ReportGen (Desktop GUI System)</h3>
+            <p class="p-desc">Offline desktop application refactored from a CMD console script into an intuitive Java
+              Swing GUI with AI assistance.</p>
+            <div class="p-tech">
+              <span>Java Swing</span>
+              <span>OOP</span>
+              <span>AI-Assisted</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://github.com/ikrishhsinghh/ReportGen.git" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline btn-sm">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 9: Data Analysis Excel -->
+          <article class="project-bento-card" data-proj-cat="data">
+            <div class="p-top">
+              <span class="p-tag tag-emerald"><i class="fa-solid fa-file-excel"></i> Excel Analytics</span>
+              <span class="p-date">Repository</span>
+            </div>
+            <h3 class="p-name">End-to-End Data Analysis Workflows</h3>
+            <p class="p-desc">Complete data analysis lifecycle repository: cleaning, transformation, pivot modeling, and
+              executive KPI dashboards in Excel.</p>
+            <div class="p-tech">
+              <span>Advanced Excel</span>
+              <span>Data Cleaning</span>
+              <span>BI</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://github.com/ikrishhsinghh/DATA-ANALYSIS-USING-EXCEL" target="_blank"
+                rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 3: CAREER & STAGE TRAJECTORY ==================== -->
+    <section class="view-panel" id="view-career">
+      <div class="container">
+        <div class="panel-heading">
+          <span class="panel-kicker">03 / Career & Stage</span>
+          <h2 class="panel-title">Work Experience & <span class="name-highlight">Leadership</span></h2>
+          <p class="panel-lead">Real execution across software engineering, media hosting, teaching, and keynote stage
+            direction.</p>
+
+          <div class="panel-filter-bar" role="tablist">
+            <button class="filter-pill active" data-exp-filter="all">All Roles</button>
+            <button class="filter-pill" data-exp-filter="tech">Engineering & Product</button>
+            <button class="filter-pill" data-exp-filter="leadership">Leadership & Hosting</button>
+          </div>
+        </div>
+
+        <div class="career-stream">
+          <!-- 1: Podcast Host -->
+          <div class="career-entry" data-exp-cat="leadership">
+            <div class="career-time-col">
+              <span class="time-badge current"><i class="fa-regular fa-calendar-check"></i> Aug 2026 – Present</span>
+            </div>
+            <div class="career-spine-col" aria-hidden="true">
+              <div class="spine-line"></div>
+              <div class="spine-dot current"></div>
+            </div>
+            <div class="career-card">
+              <div class="career-header-row">
+                <div class="career-title-wrap">
+                  <h3 class="career-role">Host — Pillai University Podcast Team</h3>
+                  <h4 class="career-org"><i class="fa-solid fa-location-dot"></i> Pillai University • Panvel</h4>
+                </div>
+                <div class="career-tags">
+                  <span class="tag-amber"><i class="fa-solid fa-microphone-lines"></i> Hosting & Media</span>
+                  <span class="tag-emerald"><i class="fa-solid fa-circle-dot"></i> Current</span>
+                </div>
+              </div>
+              <p class="career-text">
+                Leading the official university podcast. Interviewing thought leaders, faculty, and student innovators.
+                Steering high-impact dialogues and audience reach.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2: Head, Computer Association -->
+          <div class="career-entry" data-exp-cat="leadership tech">
+            <div class="career-time-col">
+              <span class="time-badge current"><i class="fa-regular fa-calendar-check"></i> Feb 2026 – Present</span>
+            </div>
+            <div class="career-spine-col" aria-hidden="true">
+              <div class="spine-line"></div>
+              <div class="spine-dot current"></div>
+            </div>
+            <div class="career-card">
+              <div class="career-header-row">
+                <div class="career-title-wrap">
+                  <h3 class="career-role">Head — Computer Association</h3>
+                  <h4 class="career-org"><i class="fa-solid fa-location-dot"></i> Pillai University, Panvel (PCACS)</h4>
+                </div>
+                <div class="career-tags">
+                  <span class="tag-amber"><i class="fa-solid fa-users"></i> Leadership</span>
+                  <span class="tag-emerald"><i class="fa-solid fa-circle-dot"></i> Current</span>
+                </div>
+              </div>
+              <p class="career-text">
+                Leading the premier student tech association at PCACS. Directing hackathons, workshops, digital
+                presence, and cross-team roadmaps.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3: Team Social Media -->
+          <div class="career-entry" data-exp-cat="leadership">
+            <div class="career-time-col">
+              <span class="time-badge current"><i class="fa-regular fa-calendar-check"></i> Aug 2025 – Present</span>
+            </div>
+            <div class="career-spine-col" aria-hidden="true">
+              <div class="spine-line"></div>
+              <div class="spine-dot current"></div>
+            </div>
+            <div class="career-card">
+              <div class="career-header-row">
+                <div class="career-title-wrap">
+                  <h3 class="career-role">Social Media & Content</h3>
+                  <h4 class="career-org"><i class="fa-solid fa-globe"></i>Self-Employed</h4>
+                </div>
+                <div class="career-tags">
+                  <span class="tag-amber"><i class="fa-solid fa-share-nodes"></i> Community & Media</span>
+                  <span class="tag-emerald"><i class="fa-solid fa-circle-dot"></i> Current</span>
+                </div>
+              </div>
+              <p class="career-text">
+                Directed content strategy, creative campaigns, and video assets, establishing an engaging social media
+                identity for the Computer Association.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4: Freelance UI/UX -->
+          <div class="career-entry" data-exp-cat="tech">
+            <div class="career-time-col">
+              <span class="time-badge current"><i class="fa-regular fa-calendar-check"></i> Jul 2025 – Present</span>
+            </div>
+            <div class="career-spine-col" aria-hidden="true">
+              <div class="spine-line"></div>
+              <div class="spine-dot current"></div>
+            </div>
+            <div class="career-card">
+              <div class="career-header-row">
+                <div class="career-title-wrap">
+                  <h3 class="career-role">Freelance UI/UX & Digital Specialist</h3>
+                  <h4 class="career-org"><i class="fa-solid fa-globe"></i> Self-Employed • Global Clients</h4>
+                </div>
+                <div class="career-tags">
+                  <span class="tag-indigo"><i class="fa-brands fa-figma"></i> Design & Product</span>
+                  <span class="tag-emerald"><i class="fa-solid fa-circle-dot"></i> Current</span>
+                </div>
+              </div>
+              <p class="career-text">
+                Designing high-fidelity UI/UX systems in Figma, responsive web prototypes, visual brand guidelines, and
+                video scripts for clients internationally.
+              </p>
+            </div>
+          </div>
+
+          <!-- 5: Viva Tutorials -->
+          <div class="career-entry" data-exp-cat="leadership">
+            <div class="career-time-col">
+              <span class="time-badge"><i class="fa-regular fa-calendar"></i> Mar 2025 – Jul 2026</span>
+            </div>
+            <div class="career-spine-col" aria-hidden="true">
+              <div class="spine-line"></div>
+              <div class="spine-dot"></div>
+            </div>
+            <div class="career-card">
+              <div class="career-header-row">
+                <div class="career-title-wrap">
+                  <h3 class="career-role">Lecturer (Biology & IT)</h3>
+                  <h4 class="career-org"><i class="fa-solid fa-location-dot"></i> Viva Tutorials • Kalyan Dombivli</h4>
+                </div>
+                <div class="career-tags">
+                  <span class="tag-amber"><i class="fa-solid fa-chalkboard-user"></i> Teaching</span>
+                </div>
+              </div>
+              <p class="career-text">
+                Taught Biology and Information Technology to secondary and higher secondary students. Authored
+                interactive notes and visual aids to elevate exam scores.
+              </p>
+            </div>
+          </div>
+
+          <!-- 6: Alegria Anchor -->
+          <div class="career-entry" data-exp-cat="leadership">
+            <div class="career-time-col">
+              <span class="time-badge"><i class="fa-regular fa-calendar"></i> Dec 2025 – Feb 2026</span>
+            </div>
+            <div class="career-spine-col" aria-hidden="true">
+              <div class="spine-line"></div>
+              <div class="spine-dot"></div>
+            </div>
+            <div class="career-card">
+              <div class="career-header-row">
+                <div class="career-title-wrap">
+                  <h3 class="career-role">Official Anchor — Alegria Festival of Joy</h3>
+                  <h4 class="career-org"><i class="fa-solid fa-location-dot"></i> Pillai University, Panvel</h4>
+                </div>
+                <div class="career-tags">
+                  <span class="tag-amber"><i class="fa-solid fa-bullhorn"></i> Keynote Anchor</span>
+                </div>
+              </div>
+              <p class="career-text">
+                Commanded live mega-stage audiences of thousands during Alegria, executing seamless artist transitions,
+                impromptu crowd engagement, and event flow.
+              </p>
+            </div>
+          </div>
+
+          <!-- 7: Cognifyz Intern -->
+          <div class="career-entry" data-exp-cat="tech">
+            <div class="career-time-col">
+              <span class="time-badge"><i class="fa-regular fa-calendar"></i> Oct 2025 – Nov 2025</span>
+            </div>
+            <div class="career-spine-col" aria-hidden="true">
+              <div class="spine-line"></div>
+              <div class="spine-dot"></div>
+            </div>
+            <div class="career-card">
+              <div class="career-header-row">
+                <div class="career-title-wrap">
+                  <h3 class="career-role">Data Visualization Intern</h3>
+                  <h4 class="career-org"><i class="fa-solid fa-building"></i> Cognifyz Technologies</h4>
+                </div>
+                <div class="career-tags">
+                  <span class="tag-indigo"><i class="fa-solid fa-chart-pie"></i> Data Science</span>
+                </div>
+              </div>
+              <p class="career-text">
+                Synthesized business datasets into visually appealing KPI dashboards, utilizing advanced Excel pivot
+                modeling, formulas, and chart visualizations.
+              </p>
+            </div>
+          </div>
+
+          <!-- 8: Quantum Learnings Intern -->
+          <div class="career-entry" data-exp-cat="tech">
+            <div class="career-time-col">
+              <span class="time-badge"><i class="fa-regular fa-calendar"></i> Sep 2025 – Nov 2025</span>
+            </div>
+            <div class="career-spine-col" aria-hidden="true">
+              <div class="spine-line"></div>
+              <div class="spine-dot"></div>
+            </div>
+            <div class="career-card">
+              <div class="career-header-row">
+                <div class="career-title-wrap">
+                  <h3 class="career-role">AI & Machine Learning Intern</h3>
+                  <h4 class="career-org"><i class="fa-solid fa-building"></i> Quantum Learnings • Panvel</h4>
+                </div>
+                <div class="career-tags">
+                  <span class="tag-indigo"><i class="fa-solid fa-robot"></i> AI & ML</span>
+                </div>
+              </div>
+              <p class="career-text">
+                Engineered an end-to-end spam email detection system using NLP text preprocessing, feature extraction,
+                and machine learning classification algorithms.
+              </p>
+            </div>
+          </div>
+
+          <!-- 9: Sainath Anchoring Head -->
+          <div class="career-entry" data-exp-cat="leadership">
+            <div class="career-time-col">
+              <span class="time-badge"><i class="fa-regular fa-calendar"></i> Nov 2023 – Feb 2025</span>
+            </div>
+            <div class="career-spine-col" aria-hidden="true">
+              <div class="spine-line"></div>
+              <div class="spine-dot"></div>
+            </div>
+            <div class="career-card">
+              <div class="career-header-row">
+                <div class="career-title-wrap">
+                  <h3 class="career-role">Anchoring Committee Head</h3>
+                  <h4 class="career-org"><i class="fa-solid fa-location-dot"></i> Sainath Junior College • Vashi Navi
+                    Mumbai</h4>
+                </div>
+                <div class="career-tags">
+                  <span class="tag-amber"><i class="fa-solid fa-microphone"></i> Stage Leadership</span>
+                </div>
+              </div>
+              <p class="career-text">
+                Selected for a role traditionally held only by faculty members. Headed and hosted 5+ major college
+                flagships including Annual Day and Academic Summit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 4: SKILLS & POLYGLOT MATRIX ==================== -->
+    <section class="view-panel" id="view-skills">
+      <div class="container">
+        <div class="panel-heading">
+          <span class="panel-kicker">04 / Competency Engine</span>
+          <h2 class="panel-title">Skills & <span class="name-highlight">Polyglot Fluency</span></h2>
+          <p class="panel-lead">Blending computer science fundamentals, vibe coding, camera-based web apps, and human
+            articulation.</p>
+        </div>
+
+        <div class="skills-dashboard-grid">
+          <!-- 1: Core CS -->
+          <div class="skills-cluster-box">
+            <div class="cluster-title-row">
+              <div class="cluster-icon-bubble cyan-bubble"><i class="fa-solid fa-laptop-code"></i></div>
+              <h3>Core CS & Systems</h3>
+            </div>
+            <div class="cluster-tags-cloud">
+              <span><i class="fa-brands fa-python"></i> Python</span>
+              <span><i class="fa-solid fa-diagram-project"></i> DSA Using Python</span>
+              <span><i class="fa-brands fa-linux"></i> Linux</span>
+              <span><i class="fa-solid fa-microchip"></i> Operating Systems</span>
+              <span><i class="fa-brands fa-react"></i> React.js</span>
+              <span><i class="fa-brands fa-html5"></i> HTML5 & CSS3</span>
+              <span><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+            </div>
+          </div>
+
+          <!-- 2: Vibe Coding -->
+          <div class="skills-cluster-box">
+            <div class="cluster-title-row">
+              <div class="cluster-icon-bubble indigo-bubble"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <h3>Vibe Coding & Web Apps</h3>
+            </div>
+            <div class="cluster-tags-cloud">
+              <span><i class="fa-solid fa-bolt"></i> Vibe Coding</span>
+              <span><i class="fa-solid fa-camera"></i> Camera-Based Web Apps</span>
+              <span><i class="fa-solid fa-gamepad"></i> Game Programming via Vibe Coding</span>
+              <span><i class="fa-solid fa-robot"></i> Antigravity</span>
+              <span><i class="fa-solid fa-triangle-circle-square"></i> Vercel</span>
+              <span><i class="fa-solid fa-book-open"></i> Jupyter Notebook</span>
+              <span><i class="fa-solid fa-cloud-arrow-up"></i> GitHub Pages</span>
+            </div>
+          </div>
+
+          <!-- 3: Cloud & Data -->
+          <div class="skills-cluster-box">
+            <div class="cluster-title-row">
+              <div class="cluster-icon-bubble amber-bubble"><i class="fa-solid fa-chart-line"></i></div>
+              <h3>Cloud & Data Science</h3>
+            </div>
+            <div class="cluster-tags-cloud">
+              <span><i class="fa-solid fa-cloud"></i> Cloud Computing</span>
+              <span><i class="fa-brands fa-aws"></i> AWS Fundamentals</span>
+              <span><i class="fa-solid fa-chart-column"></i> Python Data Visualization</span>
+              <span><i class="fa-solid fa-file-excel"></i> Advanced Excel</span>
+              <span><i class="fa-solid fa-chart-pie"></i> Power BI</span>
+              <span><i class="fa-solid fa-envelope-open-text"></i> Spam NLP</span>
+            </div>
+          </div>
+
+          <!-- 4: Design & Psychology -->
+          <div class="skills-cluster-box">
+            <div class="cluster-title-row">
+              <div class="cluster-icon-bubble emerald-bubble"><i class="fa-solid fa-pen-nib"></i></div>
+              <h3>Design & Articulation</h3>
+            </div>
+            <div class="cluster-tags-cloud">
+              <span><i class="fa-brands fa-figma"></i> Product & UI/UX Design</span>
+              <span><i class="fa-solid fa-pen-fancy"></i> Technical Writing</span>
+              <span><i class="fa-solid fa-palette"></i> Graphic Design & Branding</span>
+              <span><i class="fa-solid fa-heart-pulse"></i> Emotional Intelligence</span>
+              <span><i class="fa-solid fa-spa"></i> Yoga & Positive Psychology</span>
+              <span><i class="fa-solid fa-microphone"></i> Keynote Anchoring</span>
+              <span><i class="fa-solid fa-podcast"></i> Podcast Hosting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Polyglot Shelf -->
+        <div class="polyglot-bento-box">
+          <div class="polyglot-lead-row">
+            <i class="fa-solid fa-globe text-cyan"></i>
+            <h3>Multilingual Polyglot Matrix</h3>
+          </div>
+          <p>Fluency across 6 languages empowers diverse cultural connection and international collaboration.</p>
+          <div class="polyglot-bars-grid">
+            <div class="p-bar-item">
+              <div class="p-bar-meta"><span>Hindi</span><span>Full Professional</span></div>
+              <div class="p-bar-track">
+                <div class="p-bar-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+            <div class="p-bar-item">
+              <div class="p-bar-meta"><span>English</span><span>Full Professional</span></div>
+              <div class="p-bar-track">
+                <div class="p-bar-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+            <div class="p-bar-item">
+              <div class="p-bar-meta"><span>Marathi</span><span>Full Professional</span></div>
+              <div class="p-bar-track">
+                <div class="p-bar-fill" style="width: 95%;"></div>
+              </div>
+            </div>
+            <div class="p-bar-item">
+              <div class="p-bar-meta"><span>Bhojpuri</span><span>Full Professional</span></div>
+              <div class="p-bar-track">
+                <div class="p-bar-fill" style="width: 95%;"></div>
+              </div>
+            </div>
+            <div class="p-bar-item">
+              <div class="p-bar-meta"><span>Spanish</span><span>Elementary</span></div>
+              <div class="p-bar-track">
+                <div class="p-bar-fill" style="width: 40%;"></div>
+              </div>
+            </div>
+            <div class="p-bar-item">
+              <div class="p-bar-meta"><span>Sanskrit</span><span>Limited Working</span></div>
+              <div class="p-bar-track">
+                <div class="p-bar-fill" style="width: 50%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 5: HONORS & ACCLODATES ==================== -->
+    <section class="view-panel" id="view-honors">
+      <div class="container">
+        <div class="panel-heading">
+          <span class="panel-kicker">05 / Accolades & Trophies</span>
+          <h2 class="panel-title">Honors, Awards & <span class="name-highlight">Certifications</span></h2>
+          <p class="panel-lead">Validated distinction across leadership competitions, national representation, and
+            technical coursework.</p>
+        </div>
+
+        <div class="honors-cards-grid">
+          <!-- 1: National Face -->
+          <div class="honor-trophy-box border-gold">
+            <div class="trophy-glyph-wrap bg-gold"><i class="fa-solid fa-star"></i></div>
+            <span class="trophy-type-tag">Ambassador</span>
+            <h3 class="trophy-heading">Pillai University National Face for 2026 Admission Campaign</h3>
+            <p class="trophy-issuer">Pillai University</p>
+            <p class="trophy-description">Selected as the official student face and brand ambassador for Pillai
+              University's nationwide 2026 admission campaign.</p>
+          </div>
+
+          <!-- 2: Alegria Host -->
+          <div class="honor-trophy-box border-indigo">
+            <div class="trophy-glyph-wrap bg-indigo"><i class="fa-solid fa-microphone-lines"></i></div>
+            <span class="trophy-type-tag">Keynote Host</span>
+            <h3 class="trophy-heading">Pillai University Alegria 2026 Host</h3>
+            <p class="trophy-issuer">Alegria — The Festival of Joy</p>
+            <p class="trophy-description">Chosen to host the premier flagship stages at Alegria 2026, anchoring major
+              national events and celebrity interactions.</p>
+          </div>
+
+          <!-- 3: IEEE Cognithon -->
+          <div class="honor-trophy-box border-cyan">
+            <div class="trophy-glyph-wrap bg-cyan"><i class="fa-solid fa-medal"></i></div>
+            <span class="trophy-type-tag">2nd Place Winner</span>
+            <h3 class="trophy-heading">IEEE Cognithon Hackathon 2nd Place Winner</h3>
+            <p class="trophy-issuer">IEEE Student Branch</p>
+            <p class="trophy-description">Earned 2nd Place podium finish in competitive hackathon focusing on
+              algorithmic efficiency and real-world AI prototypes.</p>
+          </div>
+
+          <!-- 4: SIH Internal -->
+          <div class="honor-trophy-box border-cyan">
+            <div class="trophy-glyph-wrap bg-cyan"><i class="fa-solid fa-award"></i></div>
+            <span class="trophy-type-tag">2nd Place Winner</span>
+            <h3 class="trophy-heading">SIH Internal Hackathon 2nd Place Winner</h3>
+            <p class="trophy-issuer">Smart India Hackathon (SIH) Collegiate Round</p>
+            <p class="trophy-description">Achieved 2nd Place in the highly competitive SIH internal hackathon, building
+              scalable solutions for national problem statements.</p>
+          </div>
+
+          <!-- 5: PCACS Mr. Fresher -->
+          <div class="honor-trophy-box border-gold">
+            <div class="trophy-glyph-wrap bg-gold"><i class="fa-solid fa-crown"></i></div>
+            <span class="trophy-type-tag">Title Winner</span>
+            <h3 class="trophy-heading">PCACS Mr. Fresher 2025</h3>
+            <p class="trophy-issuer">Pillai College of Arts, Commerce and Science</p>
+            <p class="trophy-description">Crowned Mr. Fresher 2025 representing Computer Science, evaluating
+              articulation, charisma, confidence, and stage performance.</p>
+          </div>
+
+          <!-- 6: Best Leader 2021 -->
+          <div class="honor-trophy-box border-indigo">
+            <div class="trophy-glyph-wrap bg-indigo"><i class="fa-solid fa-shield-halved"></i></div>
+            <span class="trophy-type-tag">Leadership Honor</span>
+            <h3 class="trophy-heading">Best Leader 2021</h3>
+            <p class="trophy-issuer">New Bombay City School (NBCS CBSE)</p>
+            <p class="trophy-description">Awarded for outstanding student governance, inter-house discipline,
+              sportsmanship, and organizational leadership.</p>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="certifications-ledger-box">
+          <h3 class="cert-box-title"><i class="fa-solid fa-certificate text-amber"></i> Verified Course Certifications
+          </h3>
+          <div class="cert-tiles-grid">
+            <div class="cert-tile">
+              <i class="fa-brands fa-google"></i>
+              <div>
+                <h4>Gemini Certified University Student</h4>
+                <span>Google / Generative AI</span>
+              </div>
+            </div>
+            <div class="cert-tile">
+              <i class="fa-brands fa-figma"></i>
+              <div>
+                <h4>A Complete Guide to User Experience Design</h4>
+                <span>UX Architecture & Research</span>
+              </div>
+            </div>
+            <div class="cert-tile">
+              <i class="fa-solid fa-pen-ruler"></i>
+              <div>
+                <h4>Figma Design Basics and Features</h4>
+                <span>Design Systems & Auto-Layout</span>
+              </div>
+            </div>
+            <div class="cert-tile">
+              <i class="fa-solid fa-chart-simple"></i>
+              <div>
+                <h4>Power BI Workshop</h4>
+                <span>Business Intelligence & DAX</span>
+              </div>
+            </div>
+            <div class="cert-tile">
+              <i class="fa-brands fa-python"></i>
+              <div>
+                <h4>Python Basic Certification</h4>
+                <span>Data Structures & Scripting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 6: DIRECT CONTACT ==================== -->
+    <section class="view-panel" id="view-contact">
+      <div class="container">
+        <div class="contact-studio-box">
+          <span class="panel-kicker"><i class="fa-solid fa-paper-plane"></i> Direct Channel</span>
+          <h2 class="panel-title">Let’s Build Something <span class="name-highlight">Extraordinary.</span></h2>
+          <p class="panel-lead">
+            Whether you need a Cloud & AI collaborator, a hackathon partner, a keynote anchor, or a custom UI/UX
+            design—connect directly below.
+          </p>
+
+          <div class="contact-direct-cards">
+            <!-- Email -->
+            <div class="contact-direct-card">
+              <div class="c-glyph email-bg"><i class="fa-solid fa-envelope"></i></div>
+              <h3>Direct Email</h3>
+              <p>i.krishnasinghh@gmail.com</p>
+              <div class="c-actions">
+                <a href="mailto:i.krishnasinghh@gmail.com" class="btn btn-primary w-full">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Open in Mail</span>
+                </a>
+                <button class="btn btn-outline copy-trigger w-full" data-copy="i.krishnasinghh@gmail.com">
+                  <i class="fa-regular fa-copy"></i>
+                  <span>Copy Address</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-direct-card">
+              <div class="c-glyph linkedin-bg"><i class="fa-brands fa-linkedin-in"></i></div>
+              <h3>LinkedIn Profile</h3>
+              <p>linkedin.com/in/ikrishnasinghh</p>
+              <div class="c-actions">
+                <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-primary w-full">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <span>Open LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-direct-card">
+              <div class="c-glyph github-bg"><i class="fa-brands fa-github"></i></div>
+              <h3>GitHub Repositories</h3>
+              <p>github.com/ikrishhsinghh</p>
+              <div class="c-actions">
+                <a href="https://github.com/ikrishhsinghh" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-primary w-full">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <span>Open GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bento-footer">
+    <div class="container footer-content-row">
+      <div class="footer-identity">
+        <span class="footer-brand-title">Krishna Kamlesh Singh</span>
+        <p class="footer-tagline">Curious by nature. Creative by choice. Always building. Always improving.</p>
+      </div>
+
+      <div class="footer-links-group">
+        <div class="footer-quick-nav">
+          <button class="footer-tab-link" data-view="overview">Overview</button>
+          <button class="footer-tab-link" data-view="about">About</button>
+          <button class="footer-tab-link" data-view="projects">Projects</button>
+          <button class="footer-tab-link" data-view="career">Career</button>
+          <button class="footer-tab-link" data-view="skills">Skills</button>
+          <button class="footer-tab-link" data-view="honors">Honors</button>
+          <a href="mailto:i.krishnasinghh@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/ikrishhsinghh" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.instagram.com/whoskrsnaaa/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <p class="footer-legal">© 2026 Krishna Kamlesh Singh. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING QUICK DOCK ==================== -->
+  <aside class="bento-dock" id="bento-dock" aria-label="Quick Actions">
+    <button class="dock-btn" data-view="overview" title="Overview" aria-label="Overview"><i
+        class="fa-solid fa-grid-2"></i></button>
+    <button class="dock-btn" data-view="about" title="About Krishna" aria-label="About Krishna"><i
+        class="fa-solid fa-user"></i></button>
+    <button class="dock-btn" data-view="projects" title="Projects" aria-label="Projects"><i
+        class="fa-solid fa-shapes"></i></button>
+    <button class="dock-btn" data-view="career" title="Career" aria-label="Career"><i
+        class="fa-solid fa-briefcase"></i></button>
+    <a href="mailto:i.krishnasinghh@gmail.com" class="dock-btn" title="Email Krishna" aria-label="Email"><i
+        class="fa-solid fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer" class="dock-btn"
+      title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <button class="dock-btn copy-trigger" data-copy="i.krishnasinghh@gmail.com" title="Copy Email"
+      aria-label="Copy Email"><i class="fa-regular fa-copy"></i></button>
+  </aside>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div class="bento-toast" id="bento-toast" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check text-emerald"></i>
+    <span id="toast-text">Email copied to clipboard!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
