@@ -20,16 +20,16 @@
   <meta property="og:title" content="Krishna Kamlesh Singh — Portfolio">
   <meta property="og:description"
     content="BSc CS Student | SGPA 9.82+ | Cloud Computing | AI-Prototyping | Vibe Coding | National Face for 2026 Admission Campaign">
-  <meta property="og:image" content="assets/images/krishna-hero.jpg">
+  <meta property="og:image" content="krishna-hero.jpg">
 
   <!-- Mobile Theme Color -->
-  <meta name="theme-color" content="#090A0F">
+  <meta name="theme-color" content="#0D0E12">
 
   <!-- Google Fonts: Syne & Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Font Awesome 6 -->
@@ -40,15 +40,52 @@
 </head>
 
 <body>
-  <!-- Ambient backdrop lights -->
-  <div class="ambient-glow glow-top" aria-hidden="true"></div>
-  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+  <!-- ==================== WEBSITE OPENING ANIMATION (PRELOADER) ==================== -->
+  <div class="site-preloader" id="site-preloader" aria-label="Loading Portfolio">
+    <div class="preloader-inner">
+      <div class="preloader-kicker">
+        <span class="preloader-dot"></span>
+        <span>KRISHNA KAMLESH SINGH • STUDIO MONOGRAPH 2026</span>
+      </div>
+
+      <div class="preloader-hero-wrap">
+        <div class="preloader-title-line">
+          <span class="preloader-word">CURIOUS</span>
+          <span class="preloader-slash">/</span>
+          <span class="preloader-word highlight">BUILDER</span>
+        </div>
+        <div class="preloader-sub-line">
+          <span>BSc CS • NATIONAL FACE 2026 • HACKATHON CHAMPION</span>
+        </div>
+      </div>
+
+      <div class="preloader-meter-wrap">
+        <div class="preloader-track">
+          <div class="preloader-bar" id="preloader-bar"></div>
+        </div>
+        <div class="preloader-meta">
+          <span class="preloader-status" id="preloader-status">INITIALIZING SYSTEM...</span>
+          <span class="preloader-counter" id="preloader-counter">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Authentic Paper Texture Grain Overlay -->
+  <div class="paper-grain-overlay" aria-hidden="true"></div>
+
+  <!-- Interactive Tactile Custom Cursor -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
 
   <!-- Global Header Navigation -->
   <header class="bento-header" id="bento-header">
     <div class="container header-inner">
       <a href="#hero" class="brand-name-link" aria-label="Krishna Kamlesh Singh">
-        <span class="brand-text">Krishna Kamlesh Singh</span>
+        <span class="brand-text-full">Krishna Kamlesh Singh</span>
+        <span class="brand-text-short">Krishna Singh</span>
         <span class="active-beacon" title="Available for projects & hackathons"></span>
       </a>
 
@@ -57,7 +94,7 @@
         <button class="view-tab active" data-view="overview"><i class="fa-solid fa-grid-2"></i> Overview</button>
         <button class="view-tab" data-view="about"><i class="fa-solid fa-user"></i> About</button>
         <button class="view-tab" data-view="projects"><i class="fa-solid fa-shapes"></i> Projects</button>
-        <button class="view-tab" data-view="career"><i class="fa-solid fa-briefcase"></i> Career & Stage</button>
+        <button class="view-tab" data-view="career"><i class="fa-solid fa-briefcase"></i> Career</button>
         <button class="view-tab" data-view="skills"><i class="fa-solid fa-brain"></i> Skills</button>
         <button class="view-tab" data-view="honors"><i class="fa-solid fa-trophy"></i> Honors</button>
         <button class="view-tab" data-view="contact"><i class="fa-solid fa-paper-plane"></i> Contact</button>
@@ -72,11 +109,11 @@
 
         <!-- Social Icons (Desktop only) -->
         <a href="https://github.com/ikrishhsinghh" target="_blank" rel="noopener noreferrer"
-          class="icon-toggle-btn desktop-social" aria-label="GitHub" title="GitHub">
+          class="icon-toggle-btn desktop-social desktop-only" aria-label="GitHub" title="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer"
-          class="icon-toggle-btn desktop-social" aria-label="LinkedIn" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/ikrishhsinghh" target="_blank" rel="noopener noreferrer"
+          class="icon-toggle-btn desktop-social desktop-only" aria-label="LinkedIn" title="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
 
@@ -95,46 +132,61 @@
         </button>
       </div>
     </div>
+  </header>
 
-    <!-- Mobile Navigation Drawer -->
-    <div class="mobile-drawer-overlay" id="mobile-drawer-overlay">
-      <div class="mobile-drawer-body">
-        <ul class="mobile-drawer-tabs">
-          <li><button class="mobile-tab-btn active" data-view="overview"><i class="fa-solid fa-grid-2"></i> 01 /
-              Overview Studio</button></li>
-          <li><button class="mobile-tab-btn" data-view="about"><i class="fa-solid fa-user"></i> 02 / About
-              Krishna</button></li>
-          <li><button class="mobile-tab-btn" data-view="projects"><i class="fa-solid fa-shapes"></i> 03 /
-              Projects</button></li>
-          <li><button class="mobile-tab-btn" data-view="career"><i class="fa-solid fa-briefcase"></i> 04 / Career &
-              Stage</button></li>
-          <li><button class="mobile-tab-btn" data-view="skills"><i class="fa-solid fa-brain"></i> 05 / Skills &
-              Polyglot</button></li>
-          <li><button class="mobile-tab-btn" data-view="honors"><i class="fa-solid fa-trophy"></i> 06 / Honors &
-              Hackathons</button></li>
-          <li><button class="mobile-tab-btn" data-view="contact"><i class="fa-solid fa-paper-plane"></i> 07 / Direct
-              Contact</button></li>
-        </ul>
-        <div class="mobile-drawer-cta">
-          <a href="mailto:i.krishnasinghh@gmail.com" class="btn btn-primary w-full">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Email Directly</span>
-          </a>
-          <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer"
-            class="btn btn-outline w-full">
-            <i class="fa-brands fa-linkedin-in"></i>
-            <span>LinkedIn Profile</span>
-          </a>
+  <!-- Mobile Navigation Drawer (Direct Body Child for Viewport Stacking & Backdrop Blur Isolation) -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay">
+    <div class="mobile-drawer-body">
+      <div class="mobile-drawer-header">
+        <div class="mobile-drawer-brand">
+          <span class="active-beacon"></span>
+          <span class="mobile-drawer-title">Krishna Singh</span>
         </div>
+        <button class="mobile-drawer-close-btn" id="mobile-drawer-close-btn" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <ul class="mobile-drawer-tabs">
+        <li><button class="mobile-tab-btn active" data-view="overview"><i class="fa-solid fa-grid-2"></i> 01 /
+            Overview Studio</button></li>
+        <li><button class="mobile-tab-btn" data-view="about"><i class="fa-solid fa-user"></i> 02 / About
+            Krishna</button></li>
+        <li><button class="mobile-tab-btn" data-view="projects"><i class="fa-solid fa-shapes"></i> 03 /
+            Projects</button></li>
+        <li><button class="mobile-tab-btn" data-view="career"><i class="fa-solid fa-briefcase"></i> 04 / Career &
+            Stage</button></li>
+        <li><button class="mobile-tab-btn" data-view="skills"><i class="fa-solid fa-brain"></i> 05 / Skills &
+            Polyglot</button></li>
+        <li><button class="mobile-tab-btn" data-view="honors"><i class="fa-solid fa-trophy"></i> 06 / Honors &
+            Hackathons</button></li>
+        <li><button class="mobile-tab-btn" data-view="contact"><i class="fa-solid fa-paper-plane"></i> 07 / Direct
+            Contact</button></li>
+      </ul>
+
+      <div class="mobile-drawer-cta">
+        <a href="mailto:i.krishnasinghh@gmail.com" class="btn btn-primary w-full">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Email Directly</span>
+        </a>
+        <a href="https://www.linkedin.com/in/ikrishhsinghh" target="_blank" rel="noopener noreferrer"
+          class="btn btn-outline w-full">
+          <i class="fa-brands fa-linkedin-in"></i>
+          <span>LinkedIn Profile</span>
+        </a>
       </div>
     </div>
-  </header>
+  </div>
 
   <main class="bento-main">
     <!-- ==================== HERO TYPOGRAPHIC HEADER ==================== -->
     <section class="bento-hero-section" id="hero">
       <div class="container">
         <div class="bento-hero-header">
+          <div class="hero-kicker-strip">
+            <i class="fa-solid fa-sparkles"></i> 2026 Editorial Monograph & Studio Portfolio
+          </div>
+
           <h1 class="hero-full-name">
             Krishna <span class="name-highlight">Kamlesh Singh</span>
           </h1>
@@ -176,6 +228,62 @@
       </div>
     </section>
 
+    <!-- ==================== TACTILE EDITORIAL MARQUEE TICKER ==================== -->
+    <div class="tactile-ticker-wrap" aria-label="Key Distinction Highlights">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span class="ticker-item"><span class="ticker-badge stamp-orange">NATIONAL FACE 2026</span> Pillai University
+            Admission Campaign</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-green">DARPAN & DRISHTI</span> SIH Hackathon
+            Platforms</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-amber">SGPA 9.82+</span> BSc Computer Science</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-cobalt">TRAVORA</span> Dynamic Tour Intelligence
+            Engine</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-green">2+ HACKATHONS</span> IEEE Cognithon & SIH
+            Internal</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-orange">RAAHAT</span> Emergency Response DSA
+            System</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-charcoal">ALEGRIA 2026 HOST</span> Keynote Stage
+            Anchor</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-cobalt">PODCAST HOST</span> Beyond Curriculum
+            Series</span>
+          <span class="ticker-sep">✦</span>
+        </div>
+        <div class="ticker-group" aria-hidden="true">
+          <span class="ticker-item"><span class="ticker-badge stamp-orange">NATIONAL FACE 2026</span> Pillai University
+            Admission Campaign</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-green">DARPAN & DRISHTI</span> SIH Hackathon
+            Platforms</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-amber">SGPA 9.82+</span> BSc Computer Science</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-cobalt">TRAVORA</span> Dynamic Tour Intelligence
+            Engine</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-green">2+ HACKATHONS</span> IEEE Cognithon & SIH
+            Internal</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-orange">RAAHAT</span> Emergency Response DSA
+            System</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-charcoal">ALEGRIA 2026 HOST</span> Keynote Stage
+            Anchor</span>
+          <span class="ticker-sep">✦</span>
+          <span class="ticker-item"><span class="ticker-badge stamp-cobalt">PODCAST HOST</span> Beyond Curriculum
+            Series</span>
+          <span class="ticker-sep">✦</span>
+        </div>
+      </div>
+    </div>
+
     <!-- ==================== VIEW 1: INTERACTIVE BENTO STUDIO (OVERVIEW) ==================== -->
     <section class="view-panel active" id="view-overview">
       <div class="container">
@@ -183,7 +291,6 @@
 
           <!-- TILE 1: PODIUM PORTRAIT & STAGE COMMAND (Large Vertical Bento) -->
           <div class="bento-tile tile-portrait" id="bento-portrait">
-            <div class="tile-glow"></div>
             <div class="portrait-crop-frame">
               <img src="krishna-hero.jpg" alt="Krishna Kamlesh Singh speaking at the podium at Pillai University"
                 class="portrait-img" loading="eager">
@@ -246,10 +353,9 @@
               coding.
             </p>
             <div class="arcade-preview-strip">
-              <span class="arcade-icon">🍉</span>
-              <span class="arcade-icon">🍍</span>
-              <span class="arcade-icon">🍓</span>
-              <span class="arcade-icon">⚡</span>
+              <span class="arcade-badge"><i class="fa-solid fa-gamepad text-amber"></i> 60 FPS Engine</span>
+              <span class="arcade-badge"><i class="fa-solid fa-bolt text-orange"></i> Physics</span>
+              <span class="arcade-badge"><i class="fa-solid fa-trophy text-emerald"></i> Arcade Mode</span>
             </div>
             <div class="tile-bottom-row">
               <div class="tile-pills">
@@ -267,21 +373,87 @@
 
           <!-- TILE 4: ACADEMIC SCORECARD -->
           <div class="bento-tile tile-metric">
-            <span class="tile-tag tag-emerald"><i class="fa-solid fa-graduation-cap"></i> Academics</span>
-            <div class="large-metric">9.82<span class="accent-plus">+</span></div>
-            <h4 class="metric-title">Current SGPA</h4>
-            <p class="metric-desc">BSc Computer Science @ Pillai College of Arts, Commerce & Science (2025–2028).</p>
+            <div class="tile-top-row">
+              <span class="tile-tag tag-emerald"><i class="fa-solid fa-graduation-cap"></i> Academics</span>
+              <span class="tile-year">Rank: Top Decile</span>
+            </div>
+            <div class="large-metric">9.82<span class="accent-plus">+</span> <span class="metric-unit-tag">SGPA</span>
+            </div>
+            <h4 class="metric-title">Current Academic Distinction</h4>
+            <p class="metric-desc">BSc Computer Science @ Pillai University PCACS (2025–2028). Strong foundation across
+              Systems, Cloud, Algorithms, and Discrete Mathematics.</p>
+            <div class="academic-breakdown-strip">
+              <div class="ac-chip"><i class="fa-solid fa-star text-amber"></i> Sem 1: <strong>10.0 SGPA</strong></div>
+              <div class="ac-chip"><i class="fa-solid fa-star text-amber"></i> Sem 2: <strong>9.65+ SGPA</strong></div>
+              <div class="ac-chip"><i class="fa-solid fa-award text-emerald"></i> Top 1% Decile</div>
+            </div>
+            <div class="tile-bottom-row">
+              <div class="tile-pills">
+                <span>Cloud Eng</span>
+                <span>Python DSA</span>
+                <span>DBMS</span>
+                <span>Linux OS</span>
+              </div>
+            </div>
           </div>
 
-          <!-- TILE 5: HACKATHON PODIUM WINS -->
+          <!-- TILE 5: HACKATHON PODIUM WINS & PLATFORMS -->
           <div class="bento-tile tile-hackathons">
-            <span class="tile-tag tag-cyan"><i class="fa-solid fa-trophy"></i> Competitions</span>
-            <div class="large-metric">2<span class="accent-plus">+</span> <span class="metric-unit-tag">Wins</span>
+            <div class="tile-top-row">
+              <span class="tile-tag tag-cyan"><i class="fa-solid fa-trophy"></i> Hackathon Distinctions</span>
+              <button class="view-more-link" data-switch="projects">View All 14 Projects →</button>
             </div>
-            <h4 class="metric-title">Hackathon Champion</h4>
-            <div class="hackathon-badge-list">
-              <div class="h-badge">🥈 <strong>IEEE Cognithon</strong> 2nd Place Winner</div>
-              <div class="h-badge">🥈 <strong>SIH Internal</strong> 2nd Place Winner</div>
+
+            <!-- Sculpted Stat Lockup -->
+            <div class="stat-badge-header">
+              <div class="stat-number-box">2<span class="accent-plus">+</span></div>
+              <div class="stat-label-box">
+                <span class="stat-kicker">NATIONAL & IEEE STAGES</span>
+                <h4 class="stat-subheading">Podium Hackathon Champion</h4>
+              </div>
+            </div>
+
+            <!-- Structured Distinction Rows (Zero Awkward Wrapping) -->
+            <div class="achievement-entries-list">
+              <div class="achievement-entry">
+                <div class="ach-medallion ach-gold">
+                  <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div class="ach-info">
+                  <strong class="ach-title">SIH 2026 Internal Hackathon</strong>
+                  <span class="ach-desc">DARPAN (AI Land Digitization) & DRISHTI</span>
+                </div>
+                <span class="ach-pill pill-gold">2nd Place</span>
+              </div>
+
+              <div class="achievement-entry">
+                <div class="ach-medallion ach-cyan">
+                  <i class="fa-solid fa-medal"></i>
+                </div>
+                <div class="ach-info">
+                  <strong class="ach-title">IEEE Cognithon 2026</strong>
+                  <span class="ach-desc">Cloud Architecture & Rapid Prototype</span>
+                </div>
+                <span class="ach-pill pill-cyan">2nd Place</span>
+              </div>
+
+              <div class="achievement-entry">
+                <div class="ach-medallion ach-orange">
+                  <i class="fa-solid fa-compass"></i>
+                </div>
+                <div class="ach-info">
+                  <strong class="ach-title">TRAVORA Intelligence</strong>
+                  <span class="ach-desc">Dynamic Tour Engine & AI Itineraries</span>
+                </div>
+                <span class="ach-pill pill-orange">Live App</span>
+              </div>
+            </div>
+
+            <!-- Hackathon Meta Chips -->
+            <div class="hackathon-meta-footer">
+              <span class="h-meta-chip"><i class="fa-solid fa-users text-indigo"></i> Team DyutiX Lead</span>
+              <span class="h-meta-chip"><i class="fa-solid fa-bolt text-amber"></i> 48-Hour Rapid Sprints</span>
+              <span class="h-meta-chip"><i class="fa-solid fa-circle-check text-emerald"></i> Production Shipped</span>
             </div>
           </div>
 
@@ -374,48 +546,83 @@
 
           <!-- Visual Media Frame with Podcast Studio Image -->
           <div class="about-media-card">
+            <div class="about-card-topbar">
+              <span class="studio-status-pill">
+                <span class="live-rec-dot"></span>
+                <span>STUDIO BROADCAST • ON AIR</span>
+              </span>
+              <span class="about-motto-pill">
+                <i class="fa-solid fa-arrows-rotate"></i> BUILD • SHIP • REPEAT
+              </span>
+            </div>
+
             <div class="about-photo-wrap">
               <img src="krishna-podcast.jpg"
                 alt="Krishna Singh in the Beyond Curriculum podcast recording studio at Pillai University"
                 class="about-studio-photo" loading="eager">
               <div class="about-photo-overlay"></div>
+
+              <div class="about-photo-badge">
+                <div class="badge-icon-circle">
+                  <i class="fa-solid fa-microphone-lines"></i>
+                </div>
+                <div class="badge-details">
+                  <strong class="badge-headline">Host — Beyond Curriculum Podcast</strong>
+                  <span class="badge-subline">Pillai University Studio • Thought Leadership Series</span>
+                </div>
+              </div>
             </div>
 
-            <div class="about-photo-badge">
-              <div class="badge-icon-pill">
-                <i class="fa-solid fa-podcast text-amber"></i>
-                <span class="live-pulse-dot"></span>
+            <!-- Studio Telemetry & Live Frequency Console (Fills Card Perfectly) -->
+            <div class="studio-console-footer">
+              <div class="console-now-playing">
+                <div class="console-freq-bars" id="audio-wave-visualizer" aria-label="Audio Visualizer">
+                  <span class="c-bar" style="--h: 60%; animation-delay: 0.1s;"></span>
+                  <span class="c-bar" style="--h: 90%; animation-delay: 0.3s;"></span>
+                  <span class="c-bar" style="--h: 40%; animation-delay: 0.2s;"></span>
+                  <span class="c-bar" style="--h: 75%; animation-delay: 0.4s;"></span>
+                  <span class="c-bar" style="--h: 100%; animation-delay: 0.15s;"></span>
+                  <span class="c-bar" style="--h: 50%; animation-delay: 0.25s;"></span>
+                  <span class="c-bar" style="--h: 85%; animation-delay: 0.35s;"></span>
+                  <span class="c-bar" style="--h: 65%; animation-delay: 0.05s;"></span>
+                </div>
+                <div class="console-episode-info">
+                  <span class="ep-tag">CAMPUS BROADCAST SERIES</span>
+                  <strong class="ep-title">Ep. 04 — The Cloud & Vibe Coding Horizon</strong>
+                </div>
               </div>
-              <div class="badge-details">
-                <strong>Host — Beyond Curriculum Podcast</strong>
-                <span>Pillai University Studio • Thought Leadership</span>
+              <div class="console-meta-pills">
+                <span class="c-pill"><i class="fa-solid fa-microphone-lines text-amber"></i> Multitrack Vocal Rig</span>
+                <span class="c-pill"><i class="fa-solid fa-tower-broadcast text-emerald"></i> Pillai Media Lab</span>
+                <span class="c-pill"><i class="fa-solid fa-sparkles text-orange"></i> Alegria Anchor</span>
               </div>
-            </div>
-
-            <div class="about-motto-pill">
-              <i class="fa-solid fa-repeat"></i>
-              <span>Build. Experiment. Improve. Repeat.</span>
             </div>
           </div>
 
           <!-- Narrative Introduction -->
           <div class="about-story-card">
-            <span class="panel-kicker">02 / The Person Behind The Code</span>
+            <div class="about-kicker-wrap">
+              <span class="d-tag tag-pink"><i class="fa-solid fa-user-astronaut"></i> The Person Behind The Code</span>
+            </div>
+
             <h2 class="about-main-title">
               Curious by Nature. <br><span class="name-highlight">Builder by Choice.</span>
             </h2>
 
             <div class="about-bio-body">
-              <p class="bio-highlight">
-                I’m <strong>Krishna Singh</strong>, a second-year Computer Science student with a strong interest in
-                <strong>Cloud Engineering</strong>, <strong>Data Science</strong>, <strong>Artificial
-                  Intelligence</strong>,
-                and technology-driven innovation. I’m someone who is constantly curious about how things work, how they
-                can be improved,
-                and how an idea can be transformed into something people can actually use.
-              </p>
+              <div class="bio-lead-box">
+                <p class="bio-highlight">
+                  I’m <strong>Krishna Singh</strong>, a second-year Computer Science student with a strong interest in
+                  <strong>Cloud Engineering</strong>, <strong>Data Science</strong>, <strong>Artificial
+                    Intelligence</strong>,
+                  and technology-driven innovation. I’m someone who is constantly curious about how things work, how
+                  they
+                  can be improved,
+                  and how an idea can be transformed into something people can actually use.
+                </p>
+              </div>
 
-              <p>
+              <p class="bio-body-p">
                 My journey in technology is driven by <strong>experimentation</strong>. I love building new things, but
                 I’m equally interested in taking an existing idea, understanding its limitations, and reimagining it
                 with better functionality, UI/UX, performance, and overall user experience. One of the approaches I
@@ -424,22 +631,45 @@
                 and technical understanding.
               </p>
 
+              <div class="about-traits-pill-row">
+                <span class="trait-pill"><i class="fa-solid fa-cloud"></i> Cloud Engineering</span>
+                <span class="trait-pill"><i class="fa-solid fa-microchip"></i> AI & Vibe Coding</span>
+                <span class="trait-pill"><i class="fa-solid fa-chart-column"></i> Data Analytics</span>
+                <span class="trait-pill"><i class="fa-solid fa-microphone"></i> Keynote Anchoring</span>
+              </div>
+
               <div class="about-quick-metrics">
                 <div class="q-metric">
-                  <span class="q-num">9.82<small>+</small></span>
-                  <span class="q-lbl">Current SGPA</span>
+                  <div class="q-icon-circle q-amber"><i class="fa-solid fa-graduation-cap"></i></div>
+                  <div class="q-metric-info">
+                    <span class="q-num">9.82<small>+</small></span>
+                    <span class="q-lbl">Current SGPA</span>
+                    <span class="q-sub">BSc Computer Science</span>
+                  </div>
                 </div>
                 <div class="q-metric">
-                  <span class="q-num">2<small>nd</small></span>
-                  <span class="q-lbl">SIH Hackathon</span>
+                  <div class="q-icon-circle q-cyan"><i class="fa-solid fa-trophy"></i></div>
+                  <div class="q-metric-info">
+                    <span class="q-num">2<small>nd</small></span>
+                    <span class="q-lbl">SIH Hackathon</span>
+                    <span class="q-sub">National Podium Win</span>
+                  </div>
                 </div>
                 <div class="q-metric">
-                  <span class="q-num">Head</span>
-                  <span class="q-lbl">Computer Assoc.</span>
+                  <div class="q-icon-circle q-indigo"><i class="fa-solid fa-users-gear"></i></div>
+                  <div class="q-metric-info">
+                    <span class="q-num">Head</span>
+                    <span class="q-lbl">Computer Assoc.</span>
+                    <span class="q-sub">Pillai University</span>
+                  </div>
                 </div>
                 <div class="q-metric">
-                  <span class="q-num">Host</span>
-                  <span class="q-lbl">Univ. Podcast</span>
+                  <div class="q-icon-circle q-orange"><i class="fa-solid fa-podcast"></i></div>
+                  <div class="q-metric-info">
+                    <span class="q-num">Host</span>
+                    <span class="q-lbl">Univ. Podcast</span>
+                    <span class="q-sub">Beyond Curriculum</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -452,31 +682,62 @@
 
           <!-- Mantra 1: The Inner Light -->
           <div class="mantra-card mantra-light">
-            <div class="mantra-glow amber-glow"></div>
             <div class="mantra-header-row">
-              <div class="mantra-glyph-wrap bg-amber">
+              <div class="mantra-medallion medallion-amber">
                 <i class="fa-solid fa-sun"></i>
               </div>
-              <span class="mantra-badge-tag"><i class="fa-solid fa-sparkles"></i> Guiding Light</span>
+              <div class="mantra-title-group">
+                <span class="mantra-badge-tag tag-amber"><i class="fa-solid fa-sparkles"></i> Guiding Light</span>
+                <span class="mantra-sub-kicker">Internal Optimism & Engineering Grit</span>
+              </div>
             </div>
+
             <blockquote class="mantra-quote-text">
-              Happiness can be found, even in the darkest of times, if one only remembers to turn on the light. - <span
-                class="mantra-em-amber">that one light exists within us!</span>
+              “Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.” —
+              <span class="mantra-em-amber">that one light exists within us!</span>
             </blockquote>
+
+            <p class="mantra-insight">
+              My core anchor when facing complex architectural bugs, high-pressure hackathon deadlines, or ambitious
+              university initiatives. When systems fail or uncertainty sets in, internal resolve and methodical focus
+              turn obstacles into breakthrough solutions.
+            </p>
+
+            <div class="mantra-virtues-row">
+              <span class="virtue-chip"><i class="fa-solid fa-sun text-amber"></i> Resilient Optimism</span>
+              <span class="virtue-chip"><i class="fa-solid fa-shield-halved text-emerald"></i> Calm Under
+                Pressure</span>
+              <span class="virtue-chip"><i class="fa-solid fa-lightbulb text-orange"></i> Solution Mindset</span>
+            </div>
           </div>
 
           <!-- Mantra 2: The Creed of Love -->
           <div class="mantra-card mantra-creed">
-            <div class="mantra-glow pink-glow"></div>
             <div class="mantra-header-row">
-              <div class="mantra-glyph-wrap bg-pink">
+              <div class="mantra-medallion medallion-pink">
                 <i class="fa-solid fa-heart"></i>
               </div>
-              <span class="mantra-badge-tag"><i class="fa-solid fa-compass"></i> Personal Creed</span>
+              <div class="mantra-title-group">
+                <span class="mantra-badge-tag tag-pink"><i class="fa-solid fa-compass"></i> Personal Creed</span>
+                <span class="mantra-sub-kicker">Human Connection & Authentic Leadership</span>
+              </div>
             </div>
+
             <blockquote class="mantra-quote-text">
-              Be Bold, Be Real, Be Kind, Be Love - <span class="mantra-em-pink">I'm Love</span>
+              “Be Bold, Be Real, Be Kind, Be Love.” — <span class="mantra-em-pink">I'm Love</span>
             </blockquote>
+
+            <p class="mantra-insight">
+              The human operating system guiding how I lead the Computer Association, conduct podcast conversations, and
+              collaborate in technical teams. Technology is only as impactful as the empathy and genuine care we bring
+              to the people using and building it.
+            </p>
+
+            <div class="mantra-virtues-row">
+              <span class="virtue-chip"><i class="fa-solid fa-fire text-orange"></i> Bold Innovation</span>
+              <span class="virtue-chip"><i class="fa-solid fa-fingerprint text-indigo"></i> Fearless Truth</span>
+              <span class="virtue-chip"><i class="fa-solid fa-hand-holding-heart text-pink"></i> Active Kindness</span>
+            </div>
           </div>
 
         </div>
@@ -491,6 +752,11 @@
               <span class="d-tag tag-cyan"><i class="fa-solid fa-chart-line"></i> Academics & Analytics</span>
             </div>
             <h3 class="d-title">Data as a Narrative</h3>
+            <div class="d-metric-banner">
+              <span class="d-stat-val text-cyan">9.82+ SGPA</span>
+              <span class="d-stat-sep">•</span>
+              <span>Top 1% Decile Distinction</span>
+            </div>
             <p class="d-text">
               Building my foundation across Computer Science with a focus on Cloud Engineering, Data Science, Data
               Analytics, Python, Data Structures, databases, and software development.
@@ -514,6 +780,11 @@
               <span class="d-tag tag-indigo"><i class="fa-solid fa-gears"></i> Applied Engineering</span>
             </div>
             <h3 class="d-title">Learning by Shipping</h3>
+            <div class="d-metric-banner">
+              <span class="d-stat-val text-indigo">4+ Shipped Systems</span>
+              <span class="d-stat-sep">•</span>
+              <span>RAAHAT, TRAVORA & Audio</span>
+            </div>
             <p class="d-text">
               I strongly believe that learning becomes more meaningful when applied. Shipped real-world systems like
               <strong>RAAHAT</strong> (data-structure emergency response), <strong>TRAVORA</strong> (dynamic tour
@@ -538,6 +809,11 @@
               <span class="d-tag tag-emerald"><i class="fa-solid fa-medal"></i> Hackathons & Pressure</span>
             </div>
             <h3 class="d-title">Team DyutiX & High Stakes</h3>
+            <div class="d-metric-banner">
+              <span class="d-stat-val text-emerald">2nd Place National SIH</span>
+              <span class="d-stat-sep">•</span>
+              <span>DyutiX Team Captain</span>
+            </div>
             <p class="d-text">
               Secured <strong>Second Position in the SIH Internal Hackathon</strong> with team DyutiX, alongside
               national-level hackathons solving real-world problem statements.
@@ -561,6 +837,11 @@
               <span class="d-tag tag-amber"><i class="fa-solid fa-users-gear"></i> Student Leadership</span>
             </div>
             <h3 class="d-title">Student Head, Computer Association</h3>
+            <div class="d-metric-banner">
+              <span class="d-stat-val text-amber">500+ Students</span>
+              <span class="d-stat-sep">•</span>
+              <span>BitFest Technical Summit Lead</span>
+            </div>
             <p class="d-text">
               Directing large-scale technical flagships such as <strong>BitFest</strong>, coordinating workshops,
               hackathons, and student initiatives across the School of Computing at Pillai University.
@@ -584,6 +865,11 @@
               <span class="d-tag tag-pink"><i class="fa-solid fa-podcast"></i> Media & Podcasting</span>
             </div>
             <h3 class="d-title">The Beyond Curriculum Podcast</h3>
+            <div class="d-metric-banner">
+              <span class="d-stat-val text-orange">Official Host</span>
+              <span class="d-stat-sep">•</span>
+              <span>Pillai Studio Recording Series</span>
+            </div>
             <p class="d-text">
               Hosting conversations with accomplished professionals, including <strong>Dr. Sandeep Joshi</strong>
               (Principal, Pillai College of Engineering), exploring technical depth and student growth.
@@ -608,6 +894,11 @@
                 Articulation</span>
             </div>
             <h3 class="d-title">Bridging Code & Aesthetics</h3>
+            <div class="d-metric-banner">
+              <span class="d-stat-val text-purple">Keynote Anchor</span>
+              <span class="d-stat-sep">•</span>
+              <span>Alegria 2026 Mega-Stages</span>
+            </div>
             <p class="d-text">
               Fusing software engineering with Graphic Design, UI/UX in Figma, visual branding, and keynote stage
               anchoring. Designing interfaces that are not only functional, but intuitive and delightful.
@@ -709,22 +1000,156 @@
     <section class="view-panel" id="view-projects">
       <div class="container">
         <div class="panel-heading">
-          <span class="panel-kicker">03 / Selected Works</span>
+          <span class="panel-kicker">03 / Selected Works & Shipped Builds</span>
           <h2 class="panel-title">Projects & <span class="name-highlight">Vibe Coding</span></h2>
-          <p class="panel-lead">Explore 9 shipped works across gesture web audio, browser games, full-stack systems, and
-            UX.</p>
+          <p class="panel-lead">Explore 14 shipped works across national hackathon platforms, dynamic AI systems, web
+            audio, games, and foundational CS repositories.</p>
 
           <div class="panel-filter-bar" role="tablist">
-            <button class="filter-pill active" data-proj-filter="all">All Projects</button>
-            <button class="filter-pill" data-proj-filter="interactive">Interactive & Games</button>
+            <button class="filter-pill active" data-proj-filter="all">All Projects (14)</button>
+            <button class="filter-pill" data-proj-filter="hackathons">Hackathons & SIH</button>
             <button class="filter-pill" data-proj-filter="ai-soft">AI & Web Apps</button>
+            <button class="filter-pill" data-proj-filter="interactive">Interactive & Games</button>
             <button class="filter-pill" data-proj-filter="ui-ux">UI/UX & Design</button>
-            <button class="filter-pill" data-proj-filter="data">Data & Analytics</button>
+            <button class="filter-pill" data-proj-filter="data">Data & Systems</button>
           </div>
         </div>
 
         <div class="projects-card-grid">
-          <!-- 1: Kuhoo -->
+          <!-- 1: DARPAN (SIH Hackathon) -->
+          <article class="project-bento-card" data-proj-cat="hackathons ai-soft data">
+            <div class="p-top">
+              <span class="p-tag tag-cyan"><i class="fa-solid fa-trophy"></i> SIH Hackathon Build</span>
+              <span class="p-date">SIH 2026</span>
+            </div>
+            <h3 class="p-name">DARPAN — Digital Archive & Record Processing with AI Networks</h3>
+            <p class="p-desc">
+              End-to-end AI and geospatial platform designed to automate the digitization, validation, and cadastral
+              mapping of legacy Indian land records with high-precision computer vision.
+            </p>
+            <div class="p-tech">
+              <span>Geospatial AI</span>
+              <span>Computer Vision</span>
+              <span>Cadastral Mapping</span>
+              <span>Render</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://darpan-sih-2026.onrender.com/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>Launch DARPAN</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 2: DRISHTI (SIH Hackathon) -->
+          <article class="project-bento-card" data-proj-cat="hackathons ai-soft">
+            <div class="p-top">
+              <span class="p-tag tag-emerald"><i class="fa-solid fa-landmark"></i> GovTech Platform</span>
+              <span class="p-date">SIH Hackathon</span>
+            </div>
+            <h3 class="p-name">DRISHTI — Transparent Land Acquisition & Intelligence</h3>
+            <p class="p-desc">
+              Unified digital platform bringing together land acquisition workflows, survey telemetry, legal governance,
+              automated
+              compensation distribution, and citizen grievance assistance into one transparent system.
+            </p>
+            <div class="p-tech">
+              <span>GovTech</span>
+              <span>Survey Telemetry</span>
+              <span>Legal Workflows</span>
+              <span>Render</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://drishti-land-acquisition.onrender.com/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>Launch DRISHTI</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 3: TRAVORA (Dynamic Tour Intelligence) -->
+          <article class="project-bento-card" data-proj-cat="hackathons ai-soft interactive">
+            <div class="p-top">
+              <span class="p-tag tag-amber"><i class="fa-solid fa-route"></i> Dynamic Travel AI</span>
+              <span class="p-date">Live Engine</span>
+            </div>
+            <h3 class="p-name">TRAVORA — Dynamic Tour Intelligence Platform</h3>
+            <p class="p-desc">
+              Dynamic tour intelligence built for unpredictable journeys. Solves rigid planning by dynamically
+              recalibrating itineraries and pricing in real time when disruptions occur, matching travelers with
+              ideal operators based on live constraints.
+            </p>
+            <div class="p-tech">
+              <span>Dynamic AI</span>
+              <span>Itinerary Engine</span>
+              <span>Constraint Solver</span>
+              <span>Render</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://travora-20260926t054032z-1-001-2.onrender.com/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>Launch TRAVORA</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 4: RAAHAT (DSA Using Python) -->
+          <article class="project-bento-card" data-proj-cat="data ai-soft">
+            <div class="p-top">
+              <span class="p-tag tag-pink"><i class="fa-solid fa-truck-medical"></i> DSA Using Python</span>
+              <span class="p-date">Python DSA Project</span>
+            </div>
+            <h3 class="p-name">RAAHAT — Algorithmic Emergency Response System</h3>
+            <p class="p-desc">
+              Disaster relief and emergency response dispatch platform built on core Data Structures and Algorithms in
+              Python. Leverages graph routing, priority heaps, and dynamic queues for life-critical resource allocation.
+            </p>
+            <div class="p-tech">
+              <span>Python DSA</span>
+              <span>Graph Theory</span>
+              <span>Priority Queues</span>
+              <span>Algorithms</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://github.com/ikrishhsinghh/PRACTICALS-AND-PROJECTS-PERFORMED/tree/main/DSA%20USING%20PYTHON%20PROJECT"
+                target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub Repo</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 5: All Practicals & Projects Repo -->
+          <article class="project-bento-card" data-proj-cat="data ai-soft">
+            <div class="p-top">
+              <span class="p-tag tag-indigo"><i class="fa-brands fa-github"></i> Academic Master Repo</span>
+              <span class="p-date">Master Repository</span>
+            </div>
+            <h3 class="p-name">Computer Science Practicals & Lab Vault</h3>
+            <p class="p-desc">
+              Comprehensive university repository housing all practicals and software lab implementations across Data
+              Structures & Algorithms using Python, Operating Systems, database systems, and semester software
+              engineering builds.
+            </p>
+            <div class="p-tech">
+              <span>Python DSA</span>
+              <span>Operating Systems</span>
+              <span>Database Labs</span>
+              <span>CS Portfolio</span>
+            </div>
+            <div class="p-footer">
+              <a href="https://github.com/ikrishhsinghh/PRACTICALS-AND-PROJECTS-PERFORMED" target="_blank"
+                rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i class="fa-brands fa-github"></i>
+                <span>Master Repository</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 6: Kuhoo -->
           <article class="project-bento-card" data-proj-cat="interactive ai-soft">
             <div class="p-top">
               <span class="p-tag tag-purple"><i class="fa-solid fa-music"></i> Gesture Audio</span>
@@ -934,11 +1359,11 @@
       </div>
     </section>
 
-    <!-- ==================== VIEW 3: CAREER & STAGE TRAJECTORY ==================== -->
+    <!-- ==================== VIEW 4: CAREER & STAGE TRAJECTORY ==================== -->
     <section class="view-panel" id="view-career">
       <div class="container">
         <div class="panel-heading">
-          <span class="panel-kicker">03 / Career & Stage</span>
+          <span class="panel-kicker">04 / Career & Stage</span>
           <h2 class="panel-title">Work Experience & <span class="name-highlight">Leadership</span></h2>
           <p class="panel-lead">Real execution across software engineering, media hosting, teaching, and keynote stage
             direction.</p>
@@ -1018,7 +1443,7 @@
               <div class="career-header-row">
                 <div class="career-title-wrap">
                   <h3 class="career-role">Social Media & Content</h3>
-                  <h4 class="career-org"><i class="fa-solid fa-globe"></i>Self-Employed</h4>
+                  <h4 class="career-org"><i class="fa-solid fa-globe"></i> Self-Employed</h4>
                 </div>
                 <div class="career-tags">
                   <span class="tag-amber"><i class="fa-solid fa-share-nodes"></i> Community & Media</span>
@@ -1176,8 +1601,7 @@
               <div class="career-header-row">
                 <div class="career-title-wrap">
                   <h3 class="career-role">Anchoring Committee Head</h3>
-                  <h4 class="career-org"><i class="fa-solid fa-location-dot"></i> Sainath Junior College • Vashi Navi
-                    Mumbai</h4>
+                  <h4 class="career-org"><i class="fa-solid fa-location-dot"></i> Sainath Junior College • Vashi Navi Mumbai</h4>
                 </div>
                 <div class="career-tags">
                   <span class="tag-amber"><i class="fa-solid fa-microphone"></i> Stage Leadership</span>
@@ -1193,257 +1617,690 @@
       </div>
     </section>
 
-    <!-- ==================== VIEW 4: SKILLS & POLYGLOT MATRIX ==================== -->
+    <!-- ==================== VIEW 5: SKILLS & POLYGLOT MATRIX ==================== -->
     <section class="view-panel" id="view-skills">
       <div class="container">
         <div class="panel-heading">
-          <span class="panel-kicker">04 / Competency Engine</span>
+          <span class="panel-kicker">05 / Competency Engine & Systems Architecture</span>
           <h2 class="panel-title">Skills & <span class="name-highlight">Polyglot Fluency</span></h2>
-          <p class="panel-lead">Blending computer science fundamentals, vibe coding, camera-based web apps, and human
-            articulation.</p>
+          <p class="panel-lead">Blending low-level computer science fundamentals, high-velocity vibe coding,
+            camera-based web apps, and human articulation.</p>
         </div>
 
+        <!-- 4 Core Competency Clusters -->
         <div class="skills-dashboard-grid">
-          <!-- 1: Core CS -->
-          <div class="skills-cluster-box">
-            <div class="cluster-title-row">
-              <div class="cluster-icon-bubble cyan-bubble"><i class="fa-solid fa-laptop-code"></i></div>
-              <h3>Core CS & Systems</h3>
+          <!-- 1: Core CS & Systems -->
+          <div class="skills-cluster-box cluster-cs">
+            <div class="cluster-top-banner">
+              <div class="cluster-title-row">
+                <div class="cluster-icon-bubble cyan-bubble"><i class="fa-solid fa-laptop-code"></i></div>
+                <div>
+                  <span class="cluster-category-kicker">COMPUTATION & FOUNDATIONS</span>
+                  <h3>Core CS & Systems</h3>
+                </div>
+              </div>
+              <span class="cluster-badge cyan-badge"><i class="fa-solid fa-code-commit"></i> Production Core</span>
             </div>
-            <div class="cluster-tags-cloud">
-              <span><i class="fa-brands fa-python"></i> Python</span>
-              <span><i class="fa-solid fa-diagram-project"></i> DSA Using Python</span>
-              <span><i class="fa-brands fa-linux"></i> Linux</span>
-              <span><i class="fa-solid fa-microchip"></i> Operating Systems</span>
-              <span><i class="fa-brands fa-react"></i> React.js</span>
-              <span><i class="fa-brands fa-html5"></i> HTML5 & CSS3</span>
-              <span><i class="fa-brands fa-js"></i> JavaScript</span>
-              <span><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+            <p class="cluster-summary">Rigorous computer science fundamentals spanning algorithm optimization, memory
+              models, and modern fullstack engines.</p>
+            <div class="cluster-skills-list">
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-brands fa-python text-amber"></i>
+                  <span class="skill-title">Python</span>
+                </div>
+                <span class="skill-tier tier-advanced">Advanced</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-diagram-project text-cyan"></i>
+                  <span class="skill-title">DSA in Python</span>
+                </div>
+                <span class="skill-tier tier-mastery">Top 1% Decile</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-brands fa-linux text-orange"></i>
+                  <span class="skill-title">Linux Kernels & Bash</span>
+                </div>
+                <span class="skill-tier tier-advanced">CLI & Posix</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-microchip text-indigo"></i>
+                  <span class="skill-title">Operating Systems</span>
+                </div>
+                <span class="skill-tier tier-core">Concurrency & Memory</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-brands fa-react text-cyan"></i>
+                  <span class="skill-title">React.js</span>
+                </div>
+                <span class="skill-tier tier-advanced">Fullstack UI</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-brands fa-js text-amber"></i>
+                  <span class="skill-title">JavaScript ES6+</span>
+                </div>
+                <span class="skill-tier tier-advanced">Modern Async</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-brands fa-html5 text-orange"></i>
+                  <span class="skill-title">HTML5 & Semantic Web</span>
+                </div>
+                <span class="skill-tier tier-core">Accessible DOM</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-brands fa-git-alt text-orange"></i>
+                  <span class="skill-title">Git & GitHub</span>
+                </div>
+                <span class="skill-tier tier-core">CI/CD & Workflows</span>
+              </div>
             </div>
           </div>
 
-          <!-- 2: Vibe Coding -->
-          <div class="skills-cluster-box">
-            <div class="cluster-title-row">
-              <div class="cluster-icon-bubble indigo-bubble"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-              <h3>Vibe Coding & Web Apps</h3>
+          <!-- 2: Vibe Coding & Web Applications -->
+          <div class="skills-cluster-box cluster-vibe">
+            <div class="cluster-top-banner">
+              <div class="cluster-title-row">
+                <div class="cluster-icon-bubble indigo-bubble"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div>
+                  <span class="cluster-category-kicker">ACCELERATED ARCHITECTURE</span>
+                  <h3>Vibe Coding & Web Apps</h3>
+                </div>
+              </div>
+              <span class="cluster-badge indigo-badge"><i class="fa-solid fa-bolt"></i> 10x Velocity</span>
             </div>
-            <div class="cluster-tags-cloud">
-              <span><i class="fa-solid fa-bolt"></i> Vibe Coding</span>
-              <span><i class="fa-solid fa-camera"></i> Camera-Based Web Apps</span>
-              <span><i class="fa-solid fa-gamepad"></i> Game Programming via Vibe Coding</span>
-              <span><i class="fa-solid fa-robot"></i> Antigravity</span>
-              <span><i class="fa-solid fa-triangle-circle-square"></i> Vercel</span>
-              <span><i class="fa-solid fa-book-open"></i> Jupyter Notebook</span>
-              <span><i class="fa-solid fa-cloud-arrow-up"></i> GitHub Pages</span>
+            <p class="cluster-summary">Harnessing multi-agent AI prompting, computer vision pipelines, and rapid
+              iterative software execution.</p>
+            <div class="cluster-skills-list">
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-bolt text-amber"></i>
+                  <span class="skill-title">Vibe Coding</span>
+                </div>
+                <span class="skill-tier tier-mastery">Velocity Pioneer</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-camera text-cyan"></i>
+                  <span class="skill-title">Camera-Based Web Apps</span>
+                </div>
+                <span class="skill-tier tier-advanced">Vision & WebRTC</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-robot text-orange"></i>
+                  <span class="skill-title">Antigravity & AI Flow</span>
+                </div>
+                <span class="skill-tier tier-mastery">Agentic Tools</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-gamepad text-indigo"></i>
+                  <span class="skill-title">Game Programming via Vibe</span>
+                </div>
+                <span class="skill-tier tier-advanced">Canvas & State</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-triangle-circle-square text-bone"></i>
+                  <span class="skill-title">Vercel & Render</span>
+                </div>
+                <span class="skill-tier tier-core">Cloud Edge Deploy</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-book-open text-amber"></i>
+                  <span class="skill-title">Jupyter Notebooks</span>
+                </div>
+                <span class="skill-tier tier-core">Data Prototyping</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-cloud-arrow-up text-cyan"></i>
+                  <span class="skill-title">GitHub Pages & DNS</span>
+                </div>
+                <span class="skill-tier tier-core">Custom Domains</span>
+              </div>
             </div>
           </div>
 
-          <!-- 3: Cloud & Data -->
-          <div class="skills-cluster-box">
-            <div class="cluster-title-row">
-              <div class="cluster-icon-bubble amber-bubble"><i class="fa-solid fa-chart-line"></i></div>
-              <h3>Cloud & Data Science</h3>
+          <!-- 3: Cloud & Data Science -->
+          <div class="skills-cluster-box cluster-data">
+            <div class="cluster-top-banner">
+              <div class="cluster-title-row">
+                <div class="cluster-icon-bubble amber-bubble"><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <span class="cluster-category-kicker">ANALYTICS & INFRASTRUCTURE</span>
+                  <h3>Cloud & Data Science</h3>
+                </div>
+              </div>
+              <span class="cluster-badge amber-badge"><i class="fa-solid fa-database"></i> Enterprise Data</span>
             </div>
-            <div class="cluster-tags-cloud">
-              <span><i class="fa-solid fa-cloud"></i> Cloud Computing</span>
-              <span><i class="fa-brands fa-aws"></i> AWS Fundamentals</span>
-              <span><i class="fa-solid fa-chart-column"></i> Python Data Visualization</span>
-              <span><i class="fa-solid fa-file-excel"></i> Advanced Excel</span>
-              <span><i class="fa-solid fa-chart-pie"></i> Power BI</span>
-              <span><i class="fa-solid fa-envelope-open-text"></i> Spam NLP</span>
+            <p class="cluster-summary">Architecting cloud micro-services, machine learning classification pipelines, and
+              executive intelligence dashboards.</p>
+            <div class="cluster-skills-list">
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-cloud text-cyan"></i>
+                  <span class="skill-title">Cloud Computing</span>
+                </div>
+                <span class="skill-tier tier-advanced">Distributed Web</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-brands fa-aws text-orange"></i>
+                  <span class="skill-title">AWS Fundamentals</span>
+                </div>
+                <span class="skill-tier tier-core">EC2, S3 & IAM</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-chart-pie text-amber"></i>
+                  <span class="skill-title">Power BI & DAX</span>
+                </div>
+                <span class="skill-tier tier-advanced">Executive BI</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-chart-column text-cyan"></i>
+                  <span class="skill-title">Python Visualization</span>
+                </div>
+                <span class="skill-tier tier-advanced">Matplotlib & Seaborn</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-file-excel text-emerald"></i>
+                  <span class="skill-title">Advanced Excel</span>
+                </div>
+                <span class="skill-tier tier-advanced">VBA & Pivots</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-envelope-open-text text-indigo"></i>
+                  <span class="skill-title">Spam NLP Classifier</span>
+                </div>
+                <span class="skill-tier tier-core">Scikit-Learn & NLTK</span>
+              </div>
             </div>
           </div>
 
-          <!-- 4: Design & Psychology -->
-          <div class="skills-cluster-box">
-            <div class="cluster-title-row">
-              <div class="cluster-icon-bubble emerald-bubble"><i class="fa-solid fa-pen-nib"></i></div>
-              <h3>Design & Articulation</h3>
+          <!-- 4: Design Architecture & Human Articulation -->
+          <div class="skills-cluster-box cluster-design">
+            <div class="cluster-top-banner">
+              <div class="cluster-title-row">
+                <div class="cluster-icon-bubble emerald-bubble"><i class="fa-solid fa-pen-nib"></i></div>
+                <div>
+                  <span class="cluster-category-kicker">LEADERSHIP & EXPRESSION</span>
+                  <h3>Design & Articulation</h3>
+                </div>
+              </div>
+              <span class="cluster-badge emerald-badge"><i class="fa-solid fa-microphone"></i> 50k+ Live Stage</span>
             </div>
-            <div class="cluster-tags-cloud">
-              <span><i class="fa-brands fa-figma"></i> Product & UI/UX Design</span>
-              <span><i class="fa-solid fa-pen-fancy"></i> Technical Writing</span>
-              <span><i class="fa-solid fa-palette"></i> Graphic Design & Branding</span>
-              <span><i class="fa-solid fa-heart-pulse"></i> Emotional Intelligence</span>
-              <span><i class="fa-solid fa-spa"></i> Yoga & Positive Psychology</span>
-              <span><i class="fa-solid fa-microphone"></i> Keynote Anchoring</span>
-              <span><i class="fa-solid fa-podcast"></i> Podcast Hosting</span>
+            <p class="cluster-summary">Marrying interface aesthetics, ergonomics, and vocal command across flagship
+              stages and podcast broadcasts.</p>
+            <div class="cluster-skills-list">
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-brands fa-figma text-orange"></i>
+                  <span class="skill-title">Figma UI/UX Design</span>
+                </div>
+                <span class="skill-tier tier-mastery">Design Systems</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-microphone text-amber"></i>
+                  <span class="skill-title">Keynote Anchoring</span>
+                </div>
+                <span class="skill-tier tier-mastery">Alegria 2026 Host</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-podcast text-cyan"></i>
+                  <span class="skill-title">Podcast Hosting</span>
+                </div>
+                <span class="skill-tier tier-advanced">Kuhoo Studio Lead</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-pen-fancy text-indigo"></i>
+                  <span class="skill-title">Technical Writing</span>
+                </div>
+                <span class="skill-tier tier-core">Monographs & Specs</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-palette text-orange"></i>
+                  <span class="skill-title">Branding & Identity</span>
+                </div>
+                <span class="skill-tier tier-advanced">Visual Systems</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-heart-pulse text-emerald"></i>
+                  <span class="skill-title">Emotional Intelligence</span>
+                </div>
+                <span class="skill-tier tier-core">Council Leadership</span>
+              </div>
+              <div class="skill-chip">
+                <div class="skill-chip-main">
+                  <i class="fa-solid fa-spa text-emerald"></i>
+                  <span class="skill-title">Yoga & Positive Psychology</span>
+                </div>
+                <span class="skill-tier tier-core">Mindful Focus</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Polyglot Shelf -->
-        <div class="polyglot-bento-box">
-          <div class="polyglot-lead-row">
-            <i class="fa-solid fa-globe text-cyan"></i>
-            <h3>Multilingual Polyglot Matrix</h3>
+        <!-- Engineering Philosophy Strip -->
+        <div class="skills-principles-strip">
+          <div class="principle-card">
+            <div class="principle-num">01</div>
+            <div class="principle-content">
+              <h4>Algorithmic Foundation First</h4>
+              <p>Clean time & space complexity analysis (DSA in Python) ensures that software architectures remain
+                resilient, scalable, and memory-safe under heavy load.</p>
+            </div>
           </div>
-          <p>Fluency across 6 languages empowers diverse cultural connection and international collaboration.</p>
+          <div class="principle-card">
+            <div class="principle-num">02</div>
+            <div class="principle-content">
+              <h4>High-Velocity Vibe Prototyping</h4>
+              <p>Pairing multi-agent AI tooling (Antigravity) with deep conceptual clarity enables rapid 0-to-1 web app
+                builds in hours without sacrificing code aesthetics.</p>
+            </div>
+          </div>
+          <div class="principle-card">
+            <div class="principle-num">03</div>
+            <div class="principle-content">
+              <h4>Cross-Disciplinary Articulation</h4>
+              <p>Engineering excellence is elevated tenfold when paired with stage presence, charismatic storytelling,
+                and tactile design systems that delight users.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Multilingual Polyglot Passport Shelf -->
+        <div class="polyglot-bento-box">
+          <div class="polyglot-header-row">
+            <div class="polyglot-lead-col">
+              <div class="polyglot-icon-badge"><i class="fa-solid fa-globe"></i></div>
+              <div>
+                <span class="polyglot-kicker">LINGUISTIC PASSPORT</span>
+                <h3 class="polyglot-title">Multilingual Polyglot Matrix</h3>
+              </div>
+            </div>
+            <span class="polyglot-reach-pill"><i class="fa-solid fa-comment-dots"></i> 6 Fluent Dialects &
+              Languages</span>
+          </div>
+          <p class="polyglot-summary">Mastery across 6 languages empowers friction-free cultural connection, nationwide
+            student engagement, and international collaboration.</p>
+
           <div class="polyglot-bars-grid">
+            <!-- 1: Hindi -->
             <div class="p-bar-item">
-              <div class="p-bar-meta"><span>Hindi</span><span>Full Professional</span></div>
+              <div class="p-bar-meta">
+                <div class="p-lang-title">
+                  <span class="lang-flag-dot bg-amber"></span>
+                  <strong>Hindi</strong>
+                </div>
+                <span class="lang-tier-badge">C2 Native • 100%</span>
+              </div>
               <div class="p-bar-track">
                 <div class="p-bar-fill" style="width: 100%;"></div>
               </div>
+              <div class="p-bar-sub">National Keynotes • Oratory • Literature</div>
             </div>
+
+            <!-- 2: English -->
             <div class="p-bar-item">
-              <div class="p-bar-meta"><span>English</span><span>Full Professional</span></div>
+              <div class="p-bar-meta">
+                <div class="p-lang-title">
+                  <span class="lang-flag-dot bg-cyan"></span>
+                  <strong>English</strong>
+                </div>
+                <span class="lang-tier-badge">C2 Professional • 100%</span>
+              </div>
               <div class="p-bar-track">
                 <div class="p-bar-fill" style="width: 100%;"></div>
               </div>
+              <div class="p-bar-sub">Podcast Host • Tech Monographs • Anchor</div>
             </div>
+
+            <!-- 3: Marathi -->
             <div class="p-bar-item">
-              <div class="p-bar-meta"><span>Marathi</span><span>Full Professional</span></div>
+              <div class="p-bar-meta">
+                <div class="p-lang-title">
+                  <span class="lang-flag-dot bg-orange"></span>
+                  <strong>Marathi</strong>
+                </div>
+                <span class="lang-tier-badge">C1 Fluent • 95%</span>
+              </div>
               <div class="p-bar-track">
                 <div class="p-bar-fill" style="width: 95%;"></div>
               </div>
+              <div class="p-bar-sub">State Level Articulation • Cultural Fluency</div>
             </div>
+
+            <!-- 4: Bhojpuri -->
             <div class="p-bar-item">
-              <div class="p-bar-meta"><span>Bhojpuri</span><span>Full Professional</span></div>
+              <div class="p-bar-meta">
+                <div class="p-lang-title">
+                  <span class="lang-flag-dot bg-emerald"></span>
+                  <strong>Bhojpuri</strong>
+                </div>
+                <span class="lang-tier-badge">C1 Vernacular • 95%</span>
+              </div>
               <div class="p-bar-track">
                 <div class="p-bar-fill" style="width: 95%;"></div>
               </div>
+              <div class="p-bar-sub">Heritage Fluency • Native Conversational</div>
             </div>
+
+            <!-- 5: Sanskrit -->
             <div class="p-bar-item">
-              <div class="p-bar-meta"><span>Spanish</span><span>Elementary</span></div>
+              <div class="p-bar-meta">
+                <div class="p-lang-title">
+                  <span class="lang-flag-dot bg-indigo"></span>
+                  <strong>Sanskrit</strong>
+                </div>
+                <span class="lang-tier-badge">B1 Classical • 55%</span>
+              </div>
+              <div class="p-bar-track">
+                <div class="p-bar-fill" style="width: 55%;"></div>
+              </div>
+              <div class="p-bar-sub">Ancient Shlokas • Etymology & Philosophy</div>
+            </div>
+
+            <!-- 6: Spanish -->
+            <div class="p-bar-item">
+              <div class="p-bar-meta">
+                <div class="p-lang-title">
+                  <span class="lang-flag-dot bg-gold"></span>
+                  <strong>Spanish</strong>
+                </div>
+                <span class="lang-tier-badge">A2 Elementary • 40%</span>
+              </div>
               <div class="p-bar-track">
                 <div class="p-bar-fill" style="width: 40%;"></div>
               </div>
-            </div>
-            <div class="p-bar-item">
-              <div class="p-bar-meta"><span>Sanskrit</span><span>Limited Working</span></div>
-              <div class="p-bar-track">
-                <div class="p-bar-fill" style="width: 50%;"></div>
-              </div>
+              <div class="p-bar-sub">Global Study • Vocabulary & Daily Phrases</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== VIEW 5: HONORS & ACCLODATES ==================== -->
+    <!-- ==================== VIEW 6: HONORS, AWARDS & CERTIFICATIONS ==================== -->
     <section class="view-panel" id="view-honors">
       <div class="container">
         <div class="panel-heading">
-          <span class="panel-kicker">05 / Accolades & Trophies</span>
+          <span class="panel-kicker">06 / Accolades, Distinctions & Certifications</span>
           <h2 class="panel-title">Honors, Awards & <span class="name-highlight">Certifications</span></h2>
-          <p class="panel-lead">Validated distinction across leadership competitions, national representation, and
-            technical coursework.</p>
+          <p class="panel-lead">Validated distinction across national representation, competitive hackathons, collegiate
+            leadership, and verified industry credentials.</p>
         </div>
 
+        <!-- 6 Archival Trophy Cards -->
         <div class="honors-cards-grid">
-          <!-- 1: National Face -->
+          <!-- 1: National Face 2026 -->
           <div class="honor-trophy-box border-gold">
-            <div class="trophy-glyph-wrap bg-gold"><i class="fa-solid fa-star"></i></div>
-            <span class="trophy-type-tag">Ambassador</span>
-            <h3 class="trophy-heading">Pillai University National Face for 2026 Admission Campaign</h3>
-            <p class="trophy-issuer">Pillai University</p>
+            <div class="trophy-card-header">
+              <span class="trophy-year-pill">2026</span>
+              <span class="trophy-type-tag tag-ambassador"><i class="fa-solid fa-star"></i> Brand Ambassador</span>
+            </div>
+            <div class="trophy-medallion-row">
+              <div class="trophy-glyph-wrap bg-gold"><i class="fa-solid fa-crown"></i></div>
+              <div class="trophy-meta-col">
+                <span class="trophy-issuer-kicker">PILLAI UNIVERSITY</span>
+                <h3 class="trophy-heading">National Face for 2026 Admission Campaign</h3>
+              </div>
+            </div>
             <p class="trophy-description">Selected as the official student face and brand ambassador for Pillai
-              University's nationwide 2026 admission campaign.</p>
+              University's nationwide 2026 admission campaign, featured on campaign billboards, digital portals, and
+              official media reaching thousands of prospective engineers.</p>
+            <div class="trophy-footer-stats">
+              <div class="t-stat">
+                <span class="t-stat-val">15,000+</span>
+                <span class="t-stat-lbl">Aspirants Reached</span>
+              </div>
+              <span class="t-stat-verified"><i class="fa-solid fa-circle-check"></i> Official Title</span>
+            </div>
           </div>
 
-          <!-- 2: Alegria Host -->
+          <!-- 2: Alegria Host 2026 -->
           <div class="honor-trophy-box border-indigo">
-            <div class="trophy-glyph-wrap bg-indigo"><i class="fa-solid fa-microphone-lines"></i></div>
-            <span class="trophy-type-tag">Keynote Host</span>
-            <h3 class="trophy-heading">Pillai University Alegria 2026 Host</h3>
-            <p class="trophy-issuer">Alegria — The Festival of Joy</p>
-            <p class="trophy-description">Chosen to host the premier flagship stages at Alegria 2026, anchoring major
-              national events and celebrity interactions.</p>
+            <div class="trophy-card-header">
+              <span class="trophy-year-pill">2026</span>
+              <span class="trophy-type-tag tag-host"><i class="fa-solid fa-microphone-lines"></i> Keynote Anchor</span>
+            </div>
+            <div class="trophy-medallion-row">
+              <div class="trophy-glyph-wrap bg-indigo"><i class="fa-solid fa-microphone-lines"></i></div>
+              <div class="trophy-meta-col">
+                <span class="trophy-issuer-kicker">ALEGRIA FESTIVAL OF JOY</span>
+                <h3 class="trophy-heading">Pillai University Alegria 2026 Host</h3>
+              </div>
+            </div>
+            <p class="trophy-description">Chosen to host premier main stages at Alegria 2026—one of Asia's largest
+              collegiate festivals—anchoring flagship ceremonies, national celebrity guest appearances, and cultural
+              showcases.</p>
+            <div class="trophy-footer-stats">
+              <div class="t-stat">
+                <span class="t-stat-val">50,000+</span>
+                <span class="t-stat-lbl">Live Audience Scale</span>
+              </div>
+              <span class="t-stat-verified"><i class="fa-solid fa-circle-check"></i> Flagship Stage</span>
+            </div>
           </div>
 
-          <!-- 3: IEEE Cognithon -->
+          <!-- 3: IEEE Cognithon Hackathon -->
           <div class="honor-trophy-box border-cyan">
-            <div class="trophy-glyph-wrap bg-cyan"><i class="fa-solid fa-medal"></i></div>
-            <span class="trophy-type-tag">2nd Place Winner</span>
-            <h3 class="trophy-heading">IEEE Cognithon Hackathon 2nd Place Winner</h3>
-            <p class="trophy-issuer">IEEE Student Branch</p>
-            <p class="trophy-description">Earned 2nd Place podium finish in competitive hackathon focusing on
-              algorithmic efficiency and real-world AI prototypes.</p>
+            <div class="trophy-card-header">
+              <span class="trophy-year-pill">2026</span>
+              <span class="trophy-type-tag tag-podium"><i class="fa-solid fa-medal"></i> 2nd Place Winner</span>
+            </div>
+            <div class="trophy-medallion-row">
+              <div class="trophy-glyph-wrap bg-cyan"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="trophy-meta-col">
+                <span class="trophy-issuer-kicker">IEEE STUDENT BRANCH</span>
+                <h3 class="trophy-heading">IEEE Cognithon Hackathon Podium</h3>
+              </div>
+            </div>
+            <p class="trophy-description">Earned 2nd Place podium finish in this premier competitive hackathon focusing
+              on algorithmic efficiency, real-world machine learning pipelines, and high-velocity prototyping.</p>
+            <div class="trophy-footer-stats">
+              <div class="t-stat">
+                <span class="t-stat-val">2nd / 35+</span>
+                <span class="t-stat-lbl">Finalist Teams</span>
+              </div>
+              <span class="t-stat-verified"><i class="fa-solid fa-circle-check"></i> IEEE Validated</span>
+            </div>
           </div>
 
-          <!-- 4: SIH Internal -->
+          <!-- 4: SIH Internal Hackathon -->
           <div class="honor-trophy-box border-cyan">
-            <div class="trophy-glyph-wrap bg-cyan"><i class="fa-solid fa-award"></i></div>
-            <span class="trophy-type-tag">2nd Place Winner</span>
-            <h3 class="trophy-heading">SIH Internal Hackathon 2nd Place Winner</h3>
-            <p class="trophy-issuer">Smart India Hackathon (SIH) Collegiate Round</p>
-            <p class="trophy-description">Achieved 2nd Place in the highly competitive SIH internal hackathon, building
-              scalable solutions for national problem statements.</p>
+            <div class="trophy-card-header">
+              <span class="trophy-year-pill">2025</span>
+              <span class="trophy-type-tag tag-podium"><i class="fa-solid fa-award"></i> 2nd Place Winner</span>
+            </div>
+            <div class="trophy-medallion-row">
+              <div class="trophy-glyph-wrap bg-cyan"><i class="fa-solid fa-award"></i></div>
+              <div class="trophy-meta-col">
+                <span class="trophy-issuer-kicker">SMART INDIA HACKATHON</span>
+                <h3 class="trophy-heading">SIH Internal Hackathon 2nd Place</h3>
+              </div>
+            </div>
+            <p class="trophy-description">Ranked 2nd in the institutional selection round for the Smart India Hackathon,
+              architecting digital governance prototypes for automated land records (DARPAN) and land acquisition
+              intelligence (DRISHTI).</p>
+            <div class="trophy-footer-stats">
+              <div class="t-stat">
+                <span class="t-stat-val">Top 2</span>
+                <span class="t-stat-lbl">Out of 45+ Teams</span>
+              </div>
+              <span class="t-stat-verified"><i class="fa-solid fa-circle-check"></i> SIH Nominated</span>
+            </div>
           </div>
 
-          <!-- 5: PCACS Mr. Fresher -->
+          <!-- 5: PCACS Mr. Fresher 2025 -->
           <div class="honor-trophy-box border-gold">
-            <div class="trophy-glyph-wrap bg-gold"><i class="fa-solid fa-crown"></i></div>
-            <span class="trophy-type-tag">Title Winner</span>
-            <h3 class="trophy-heading">PCACS Mr. Fresher 2025</h3>
-            <p class="trophy-issuer">Pillai College of Arts, Commerce and Science</p>
-            <p class="trophy-description">Crowned Mr. Fresher 2025 representing Computer Science, evaluating
-              articulation, charisma, confidence, and stage performance.</p>
+            <div class="trophy-card-header">
+              <span class="trophy-year-pill">2025</span>
+              <span class="trophy-type-tag tag-title"><i class="fa-solid fa-trophy"></i> Title Winner</span>
+            </div>
+            <div class="trophy-medallion-row">
+              <div class="trophy-glyph-wrap bg-gold"><i class="fa-solid fa-gem"></i></div>
+              <div class="trophy-meta-col">
+                <span class="trophy-issuer-kicker">PILLAI COLLEGE (PCACS)</span>
+                <h3 class="trophy-heading">PCACS Mr. Fresher 2025 Title</h3>
+              </div>
+            </div>
+            <p class="trophy-description">Crowned Mr. Fresher 2025 representing the Department of Computer Science.
+              Judged across extempore articulation, leadership charisma, confidence under pressure, and stage
+              presentation.</p>
+            <div class="trophy-footer-stats">
+              <div class="t-stat">
+                <span class="t-stat-val">#1 Rank</span>
+                <span class="t-stat-lbl">Jury Unanimous</span>
+              </div>
+              <span class="t-stat-verified"><i class="fa-solid fa-circle-check"></i> Crown Title</span>
+            </div>
           </div>
 
           <!-- 6: Best Leader 2021 -->
           <div class="honor-trophy-box border-indigo">
-            <div class="trophy-glyph-wrap bg-indigo"><i class="fa-solid fa-shield-halved"></i></div>
-            <span class="trophy-type-tag">Leadership Honor</span>
-            <h3 class="trophy-heading">Best Leader 2021</h3>
-            <p class="trophy-issuer">New Bombay City School (NBCS CBSE)</p>
-            <p class="trophy-description">Awarded for outstanding student governance, inter-house discipline,
-              sportsmanship, and organizational leadership.</p>
+            <div class="trophy-card-header">
+              <span class="trophy-year-pill">2021</span>
+              <span class="trophy-type-tag tag-leader"><i class="fa-solid fa-shield-halved"></i> Governance</span>
+            </div>
+            <div class="trophy-medallion-row">
+              <div class="trophy-glyph-wrap bg-indigo"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="trophy-meta-col">
+                <span class="trophy-issuer-kicker">NEW BOMBAY CITY SCHOOL</span>
+                <h3 class="trophy-heading">Best Leader 2021 Valedictorian</h3>
+              </div>
+            </div>
+            <p class="trophy-description">Conferred the prestigious Best Leader Award for exceptional student council
+              stewardship, house governance, inter-school cultural leadership, and academic discipline across 1,200+
+              students.</p>
+            <div class="trophy-footer-stats">
+              <div class="t-stat">
+                <span class="t-stat-val">Council Head</span>
+                <span class="t-stat-lbl">1,200+ Student Body</span>
+              </div>
+              <span class="t-stat-verified"><i class="fa-solid fa-circle-check"></i> Valedictory Honor</span>
+            </div>
           </div>
         </div>
 
-        <!-- Certifications -->
+        <!-- Archival Verified Certifications Showcase -->
         <div class="certifications-ledger-box">
-          <h3 class="cert-box-title"><i class="fa-solid fa-certificate text-amber"></i> Verified Course Certifications
-          </h3>
+          <div class="cert-ledger-header">
+            <div>
+              <span class="cert-kicker">ACCREDITED TECHNICAL CREDENTIALS</span>
+              <h3 class="cert-box-title"><i class="fa-solid fa-certificate text-amber"></i> Verified Course
+                Certifications</h3>
+            </div>
+            <span class="cert-count-pill"><i class="fa-solid fa-shield-check"></i> 5 Verified Accreditations</span>
+          </div>
+
           <div class="cert-tiles-grid">
+            <!-- 1: Gemini Certified -->
             <div class="cert-tile">
-              <i class="fa-brands fa-google"></i>
-              <div>
+              <div class="cert-icon-frame bg-cyan-soft">
+                <i class="fa-brands fa-google text-cyan"></i>
+              </div>
+              <div class="cert-meta-info">
                 <h4>Gemini Certified University Student</h4>
-                <span>Google / Generative AI</span>
+                <div class="cert-sub-row">
+                  <span class="cert-issuer">Google / Generative AI</span>
+                  <span class="cert-verify-chip"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                </div>
+                <span class="cert-tag">LLMs • Prompt Engineering • AI Systems</span>
               </div>
             </div>
+
+            <!-- 2: Complete UX Guide -->
             <div class="cert-tile">
-              <i class="fa-brands fa-figma"></i>
-              <div>
-                <h4>A Complete Guide to User Experience Design</h4>
-                <span>UX Architecture & Research</span>
+              <div class="cert-icon-frame bg-orange-soft">
+                <i class="fa-brands fa-figma text-orange"></i>
+              </div>
+              <div class="cert-meta-info">
+                <h4>A Complete Guide to UX Design</h4>
+                <div class="cert-sub-row">
+                  <span class="cert-issuer">Interaction Architecture & Research</span>
+                  <span class="cert-verify-chip"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                </div>
+                <span class="cert-tag">Usability Testing • Personas • Wireframes</span>
               </div>
             </div>
+
+            <!-- 3: Figma Design Basics -->
             <div class="cert-tile">
-              <i class="fa-solid fa-pen-ruler"></i>
-              <div>
-                <h4>Figma Design Basics and Features</h4>
-                <span>Design Systems & Auto-Layout</span>
+              <div class="cert-icon-frame bg-indigo-soft">
+                <i class="fa-solid fa-pen-ruler text-indigo"></i>
+              </div>
+              <div class="cert-meta-info">
+                <h4>Figma Design Systems & Auto-Layout</h4>
+                <div class="cert-sub-row">
+                  <span class="cert-issuer">Figma Professional Design</span>
+                  <span class="cert-verify-chip"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                </div>
+                <span class="cert-tag">Design Tokens • Components • Prototypes</span>
               </div>
             </div>
+
+            <!-- 4: Power BI Workshop -->
             <div class="cert-tile">
-              <i class="fa-solid fa-chart-simple"></i>
-              <div>
-                <h4>Power BI Workshop</h4>
-                <span>Business Intelligence & DAX</span>
+              <div class="cert-icon-frame bg-amber-soft">
+                <i class="fa-solid fa-chart-simple text-amber"></i>
+              </div>
+              <div class="cert-meta-info">
+                <h4>Power BI Business Analytics Workshop</h4>
+                <div class="cert-sub-row">
+                  <span class="cert-issuer">Microsoft BI Ecosystem</span>
+                  <span class="cert-verify-chip"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                </div>
+                <span class="cert-tag">DAX Measures • Data Modeling • ETL</span>
               </div>
             </div>
+
+            <!-- 5: Python Basic -->
             <div class="cert-tile">
-              <i class="fa-brands fa-python"></i>
-              <div>
-                <h4>Python Basic Certification</h4>
-                <span>Data Structures & Scripting</span>
+              <div class="cert-icon-frame bg-cyan-soft">
+                <i class="fa-brands fa-python text-cyan"></i>
+              </div>
+              <div class="cert-meta-info">
+                <h4>Python Foundations & Algorithms</h4>
+                <div class="cert-sub-row">
+                  <span class="cert-issuer">Python Institute & HackerRank</span>
+                  <span class="cert-verify-chip"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                </div>
+                <span class="cert-tag">Data Structures • OOP • Algorithm Optimization</span>
               </div>
             </div>
+          </div>
+
+          <div class="cert-footnote-row">
+            <i class="fa-solid fa-info-circle text-amber"></i>
+            <span>All credentials, competition trophies, and university appointment letters are verified and available
+              upon request.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== VIEW 6: DIRECT CONTACT ==================== -->
+    <!-- ==================== VIEW 7: DIRECT CONTACT ==================== -->
     <section class="view-panel" id="view-contact">
       <div class="container">
         <div class="contact-studio-box">
-          <span class="panel-kicker"><i class="fa-solid fa-paper-plane"></i> Direct Channel</span>
+          <span class="panel-kicker">07 / Direct Channel</span>
           <h2 class="panel-title">Let’s Build Something <span class="name-highlight">Extraordinary.</span></h2>
           <p class="panel-lead">
             Whether you need a Cloud & AI collaborator, a hackathon partner, a keynote anchor, or a custom UI/UX
@@ -1501,35 +2358,90 @@
     </section>
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
+  <!-- ==================== ARCHITECTURAL EDITORIAL FOOTER ==================== -->
   <footer class="bento-footer">
-    <div class="container footer-content-row">
-      <div class="footer-identity">
-        <span class="footer-brand-title">Krishna Kamlesh Singh</span>
-        <p class="footer-tagline">Curious by nature. Creative by choice. Always building. Always improving.</p>
+    <div class="container footer-container">
+      <!-- Upper Section: Brand Identity & Active Availability -->
+      <div class="footer-top-grid">
+        <div class="footer-brand-column">
+          <div class="footer-brand-header">
+            <span class="active-beacon"></span>
+            <span class="footer-brand-name">Krishna Kamlesh Singh</span>
+          </div>
+          <p class="footer-bio-summary">
+            Second-year Computer Science student at Pillai University (<strong>SGPA 9.82+</strong>).
+            National Face for 2026 Admissions, Podcast Host & Alegria Keynote Anchor.
+            Specializing in <strong>Cloud Infrastructure</strong>, <strong>Camera-Based Web Apps</strong>, and
+            <strong>Vibe Coding</strong>.
+          </p>
+          <div class="footer-meta-chips">
+            <span class="f-chip"><i class="fa-solid fa-location-dot text-orange"></i> Mumbai / Navi Mumbai, MH</span>
+            <span class="f-chip"><i class="fa-solid fa-graduation-cap text-cyan"></i> Pillai University PCACS</span>
+            <span class="f-chip"><i class="fa-solid fa-bolt text-amber"></i> Team DyutiX Lead</span>
+          </div>
+        </div>
+
+        <div class="footer-nav-column">
+          <h4 class="footer-col-title">Studio Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><button class="footer-tab-link" data-view="overview"><i class="fa-solid fa-grid-2"></i> 01 / Overview
+                Studio</button></li>
+            <li><button class="footer-tab-link" data-view="about"><i class="fa-solid fa-user"></i> 02 / About
+                Krishna</button></li>
+            <li><button class="footer-tab-link" data-view="projects"><i class="fa-solid fa-shapes"></i> 03 / Projects &
+                Apps</button></li>
+            <li><button class="footer-tab-link" data-view="career"><i class="fa-solid fa-briefcase"></i> 04 / Career &
+                Stage</button></li>
+            <li><button class="footer-tab-link" data-view="skills"><i class="fa-solid fa-brain"></i> 05 / Skills &
+                Polyglot</button></li>
+            <li><button class="footer-tab-link" data-view="honors"><i class="fa-solid fa-trophy"></i> 06 / Honors &
+                Hackathons</button></li>
+            <li><button class="footer-tab-link" data-view="contact"><i class="fa-solid fa-paper-plane"></i> 07 / Direct
+                Contact</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-channels-column">
+          <h4 class="footer-col-title">Direct Channels</h4>
+          <ul class="footer-nav-list">
+            <li><a href="mailto:i.krishnasinghh@gmail.com"><i class="fa-solid fa-envelope text-orange"></i>
+                i.krishnasinghh@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer"><i
+                  class="fa-brands fa-linkedin-in text-cyan"></i> LinkedIn Profile</a></li>
+            <li><a href="https://github.com/ikrishhsinghh" target="_blank" rel="noopener noreferrer"><i
+                  class="fa-brands fa-github text-heading"></i> GitHub Repositories</a></li>
+            <li><a href="https://www.instagram.com/whoskrsnaaa/" target="_blank" rel="noopener noreferrer"><i
+                  class="fa-brands fa-instagram text-pink"></i> Instagram (@whoskrsnaaa)</a></li>
+          </ul>
+
+          <div class="footer-cta-card">
+            <span class="cta-kicker">COLLABORATION RADAR</span>
+            <strong class="cta-headline">Open for Hackathons & Keynote Speaking</strong>
+            <button class="btn btn-primary btn-sm copy-trigger" data-copy="i.krishnasinghh@gmail.com">
+              <i class="fa-regular fa-copy"></i>
+              <span>Copy Direct Email</span>
+            </button>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-links-group">
-        <div class="footer-quick-nav">
-          <button class="footer-tab-link" data-view="overview">Overview</button>
-          <button class="footer-tab-link" data-view="about">About</button>
-          <button class="footer-tab-link" data-view="projects">Projects</button>
-          <button class="footer-tab-link" data-view="career">Career</button>
-          <button class="footer-tab-link" data-view="skills">Skills</button>
-          <button class="footer-tab-link" data-view="honors">Honors</button>
-          <a href="mailto:i.krishnasinghh@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/ikrishhsinghh" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.instagram.com/whoskrsnaaa/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <!-- Lower Section: Monograph Colophon & Back to Top -->
+      <div class="footer-colophon-row">
+        <div class="colophon-left">
+          <p class="colophon-legal">© 2026 Krishna Kamlesh Singh. All rights reserved.</p>
+          <span class="colophon-meta">Monograph Studio Edition 2026.04 • Solid</span>
         </div>
-        <p class="footer-legal">© 2026 Krishna Kamlesh Singh. All rights reserved.</p>
+        <button class="footer-back-to-top" id="footer-back-to-top" aria-label="Scroll back to top">
+          <span>Back to Top</span>
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
       </div>
     </div>
   </footer>
 
-  <!-- ==================== FLOATING QUICK DOCK ==================== -->
-  <aside class="bento-dock" id="bento-dock" aria-label="Quick Actions">
-    <button class="dock-btn" data-view="overview" title="Overview" aria-label="Overview"><i
+  <!-- ==================== FLOATING QUICK DOCK (MOBILE & DESKTOP) ==================== -->
+  <aside class="bento-dock" id="bento-dock" aria-label="Quick Actions Navigation">
+    <button class="dock-btn active" data-view="overview" title="Overview" aria-label="Overview"><i
         class="fa-solid fa-grid-2"></i></button>
     <button class="dock-btn" data-view="about" title="About Krishna" aria-label="About Krishna"><i
         class="fa-solid fa-user"></i></button>
@@ -1537,12 +2449,12 @@
         class="fa-solid fa-shapes"></i></button>
     <button class="dock-btn" data-view="career" title="Career" aria-label="Career"><i
         class="fa-solid fa-briefcase"></i></button>
-    <a href="mailto:i.krishnasinghh@gmail.com" class="dock-btn" title="Email Krishna" aria-label="Email"><i
-        class="fa-solid fa-envelope"></i></a>
-    <a href="https://www.linkedin.com/in/ikrishnasinghh" target="_blank" rel="noopener noreferrer" class="dock-btn"
-      title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-    <button class="dock-btn copy-trigger" data-copy="i.krishnasinghh@gmail.com" title="Copy Email"
-      aria-label="Copy Email"><i class="fa-regular fa-copy"></i></button>
+    <button class="dock-btn" data-view="skills" title="Skills" aria-label="Skills"><i
+        class="fa-solid fa-brain"></i></button>
+    <button class="dock-btn" data-view="honors" title="Honors" aria-label="Honors"><i
+        class="fa-solid fa-trophy"></i></button>
+    <button class="dock-btn" data-view="contact" title="Contact" aria-label="Contact"><i
+        class="fa-solid fa-paper-plane"></i></button>
   </aside>
 
   <!-- ==================== TOAST NOTIFICATION ==================== -->
