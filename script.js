@@ -1,10 +1,11 @@
 /**
- * KRISHNA KAMLESH SINGH — INTERACTIVE BENTO STUDIO
+ * KRISHNA KAMLESH SINGH — EDITORIAL MONOGRAPH & TACTILE STUDIO
  * Client-Side JavaScript Logic
- * Zero-Config GitHub Pages Ready
+ * Solid-Color System • Tactile Micro-Interactions • Zero-Config GitHub Pages Ready
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
   initTheme();
   initViewSwitcher();
   initProjectFilters();
@@ -12,6 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initTypewriter();
   initCopyTriggers();
   initMobileDrawer();
+  initCustomCursor();
+  initTactileTilt();
+  initAudioWaveInteractivity();
+  initKeyboardShortcuts();
 });
 
 /* --------------------------------------------------------------------------
@@ -36,8 +41,10 @@ function initTheme() {
 }
 
 /* --------------------------------------------------------------------------
-   2. BENTO VIEW SWITCHER TABS
+   2. BENTO VIEW SWITCHER TABS (TACTILE SOLID PILLS)
    -------------------------------------------------------------------------- */
+const VIEW_IDS = ['overview', 'about', 'projects', 'career', 'skills', 'honors', 'contact'];
+
 function initViewSwitcher() {
   const viewPanels = document.querySelectorAll('.view-panel');
   const viewTabs = document.querySelectorAll('.view-tab');
@@ -47,6 +54,8 @@ function initViewSwitcher() {
   const switchLinks = document.querySelectorAll('[data-switch]');
 
   function switchView(targetViewId) {
+    if (!targetViewId) return;
+
     // Hide all view panels
     viewPanels.forEach(panel => {
       panel.classList.remove('active');
@@ -76,18 +85,22 @@ function initViewSwitcher() {
       }
     });
 
-    // Update active state on dock buttons
+    // Update active state on dock buttons (Solid Accent, NO Gradients)
     dockBtns.forEach(btn => {
       if (btn.getAttribute('data-view') === targetViewId) {
+        btn.classList.add('active');
         btn.style.color = '#FFFFFF';
-        btn.style.background = 'var(--grad-primary)';
+        btn.style.backgroundColor = 'var(--solid-orange)';
+        btn.style.borderColor = 'var(--solid-orange)';
       } else {
+        btn.classList.remove('active');
         btn.style.color = '';
-        btn.style.background = '';
+        btn.style.backgroundColor = '';
+        btn.style.borderColor = '';
       }
     });
 
-    // Scroll smoothly to top of main or hero if switching view
+    // Scroll smoothly to hero or top if switching view
     const heroSection = document.getElementById('hero');
     if (heroSection) {
       const topOffset = heroSection.getBoundingClientRect().top + window.scrollY - 80;
@@ -112,7 +125,7 @@ function initViewSwitcher() {
     });
   });
 
-  // Floating dock click
+  // Floating dock click (Mobile & Desktop)
   dockBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const view = btn.getAttribute('data-view');
@@ -128,6 +141,14 @@ function initViewSwitcher() {
     });
   });
 
+  // Back to top button click
+  const backToTopBtn = document.getElementById('footer-back-to-top');
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   // Internal tile switch triggers (e.g. "View All Skills →")
   switchLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -135,6 +156,9 @@ function initViewSwitcher() {
       switchView(target);
     });
   });
+
+  // Expose globally for keyboard shortcut access
+  window.krishnaSwitchView = switchView;
 }
 
 /* --------------------------------------------------------------------------
@@ -216,20 +240,20 @@ function initTypewriter() {
     if (isDeleting) {
       rotatorElem.textContent = currentRole.substring(0, charIndex - 1);
       charIndex--;
-      typingSpeed = 40;
+      typingSpeed = 35;
     } else {
       rotatorElem.textContent = currentRole.substring(0, charIndex + 1);
       charIndex++;
-      typingSpeed = 80;
+      typingSpeed = 75;
     }
 
     if (!isDeleting && charIndex === currentRole.length) {
-      typingSpeed = 2000; // Pause at end of word
+      typingSpeed = 2200; // Pause at end of word
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       roleIndex = (roleIndex + 1) % roles.length;
-      typingSpeed = 400; // Pause before typing next word
+      typingSpeed = 350; // Pause before typing next word
     }
 
     setTimeout(type, typingSpeed);
@@ -239,7 +263,7 @@ function initTypewriter() {
 }
 
 /* --------------------------------------------------------------------------
-   6. ONE-TAP COPY WITH TOAST NOTIFICATION
+   6. ONE-TAP COPY WITH TACTILE TOAST NOTIFICATION
    -------------------------------------------------------------------------- */
 function initCopyTriggers() {
   const copyTriggers = document.querySelectorAll('.copy-trigger');
@@ -266,7 +290,6 @@ function initCopyTriggers() {
         if (navigator.clipboard && navigator.clipboard.writeText) {
           await navigator.clipboard.writeText(textToCopy);
         } else {
-          // Fallback for older browser contexts
           const textArea = document.createElement('textarea');
           textArea.value = textToCopy;
           textArea.style.position = 'fixed';
@@ -293,10 +316,12 @@ let mobileDrawerOpen = false;
 function initMobileDrawer() {
   const trigger = document.getElementById('mobile-menu-trigger');
   const drawer = document.getElementById('mobile-drawer-overlay');
+  const closeBtn = document.getElementById('mobile-drawer-close-btn');
 
   if (!trigger || !drawer) return;
 
-  trigger.addEventListener('click', () => {
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
     mobileDrawerOpen = !mobileDrawerOpen;
     if (mobileDrawerOpen) {
       openMobileDrawer();
@@ -305,9 +330,23 @@ function initMobileDrawer() {
     }
   });
 
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeMobileDrawer();
+    });
+  }
+
   // Close when clicking directly on overlay backdrop
   drawer.addEventListener('click', (e) => {
     if (e.target === drawer) {
+      closeMobileDrawer();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileDrawerOpen) {
       closeMobileDrawer();
     }
   });
@@ -339,4 +378,227 @@ function closeMobileDrawer() {
   }
   mobileDrawerOpen = false;
   document.body.style.overflow = '';
+}
+
+/* --------------------------------------------------------------------------
+   8. INTERACTIVE TACTILE CUSTOM CURSOR (TOUCH-SAFE & CLEAN INITIALIZATION)
+   -------------------------------------------------------------------------- */
+function initCustomCursor() {
+  const cursor = document.getElementById('custom-cursor');
+  if (!cursor) return;
+
+  // On touch devices or coarse pointers, remove custom cursor completely
+  if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+    cursor.remove();
+    return;
+  }
+
+  const dot = cursor.querySelector('.cursor-dot');
+  const ring = cursor.querySelector('.cursor-ring');
+
+  let mouseX = -100;
+  let mouseY = -100;
+  let ringX = -100;
+  let ringY = -100;
+  let hasMoved = false;
+
+  window.addEventListener('mousemove', (e) => {
+    if (!hasMoved) {
+      hasMoved = true;
+      cursor.classList.add('active');
+    }
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    if (dot) {
+      dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+    }
+  });
+
+  // Instant kill on any touch interaction
+  window.addEventListener('touchstart', () => {
+    cursor.classList.remove('active');
+    cursor.style.display = 'none';
+  }, { passive: true });
+
+  // Smooth spring loop for the ring
+  function renderRing() {
+    ringX += (mouseX - ringX) * 0.18;
+    ringY += (mouseY - ringY) * 0.18;
+    if (ring && hasMoved) {
+      ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+    }
+    requestAnimationFrame(renderRing);
+  }
+  renderRing();
+
+  // Hover state detection
+  const interactiveTargets = 'a, button, [role="button"], .bento-tile, .dimension-card, .project-bento-card, .career-card, .honor-trophy-box, .cert-tile, .copy-trigger';
+  document.querySelectorAll(interactiveTargets).forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+  });
+
+  // Dynamic attachment for newly toggled elements
+  document.body.addEventListener('mouseover', (e) => {
+    if (e.target.closest(interactiveTargets)) {
+      cursor.classList.add('hovering');
+    } else {
+      cursor.classList.remove('hovering');
+    }
+  });
+
+  // Hide cursor when leaving window
+  document.addEventListener('mouseleave', () => {
+    cursor.classList.remove('active');
+  });
+  document.addEventListener('mouseenter', () => {
+    if (hasMoved) cursor.classList.add('active');
+  });
+}
+
+/* --------------------------------------------------------------------------
+   9. TACTILE 3D MICRO-TILT FOR BENTO TILES
+   -------------------------------------------------------------------------- */
+function initTactileTilt() {
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+
+  const tiltCards = document.querySelectorAll('.bento-tile, .project-bento-card, .dimension-card');
+
+  tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = ((y - centerY) / centerY) * -3;
+      const rotateY = ((x - centerX) / centerX) * 3;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   10. AUDIO WAVE DYNAMIC REACTIVITY
+   -------------------------------------------------------------------------- */
+function initAudioWaveInteractivity() {
+  const kuhooTile = document.querySelector('.tile-kuhoo');
+  const waveBars = document.querySelectorAll('.audio-wave-visualizer .wave-bar');
+
+  if (!kuhooTile || waveBars.length === 0) return;
+
+  kuhooTile.addEventListener('mouseenter', () => {
+    waveBars.forEach((bar, index) => {
+      bar.style.animationDuration = `${0.4 + (index * 0.1)}s`;
+    });
+  });
+
+  kuhooTile.addEventListener('mouseleave', () => {
+    waveBars.forEach(bar => {
+      bar.style.animationDuration = '1.2s';
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   11. ACCESSIBLE KEYBOARD SHORTCUTS
+   -------------------------------------------------------------------------- */
+function initKeyboardShortcuts() {
+  window.addEventListener('keydown', (e) => {
+    // Only fire if not typing inside an input or textarea
+    if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+
+    // Keys 1 to 7 switch view tabs
+    const keyNum = parseInt(e.key, 10);
+    if (!isNaN(keyNum) && keyNum >= 1 && keyNum <= VIEW_IDS.length) {
+      const targetView = VIEW_IDS[keyNum - 1];
+      if (window.krishnaSwitchView) {
+        window.krishnaSwitchView(targetView);
+      }
+    }
+
+    // Escape closes mobile drawer
+    if (e.key === 'Escape' && mobileDrawerOpen) {
+      closeMobileDrawer();
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   12. WEBSITE OPENING ANIMATION (EXACT 2-SECOND CALIBRATED PRELOADER)
+   -------------------------------------------------------------------------- */
+function initPreloader() {
+  const preloader = document.getElementById('site-preloader');
+  const bar = document.getElementById('preloader-bar');
+  const counter = document.getElementById('preloader-counter');
+  const status = document.getElementById('preloader-status');
+
+  if (!preloader || !bar || !counter) return;
+
+  const telemetrySteps = [
+    { threshold: 22, label: 'INITIALIZING STUDIO CORE...' },
+    { threshold: 48, label: 'LOADING EDITORIAL BENTO GRID...' },
+    { threshold: 74, label: 'SYNCHRONIZING AUDIO & DATA BUILDS...' },
+    { threshold: 96, label: 'CALIBRATING TACTILE PHYSICS...' },
+    { threshold: 100, label: 'SYSTEM READY • WELCOME' }
+  ];
+
+  const TOTAL_COUNT_TIME = 1650; // ms to reach 100%
+  const HOLD_TIME = 350;        // ms hold at 100% "SYSTEM READY"
+  // Total delay = 1650 + 350 = 2000ms (EXACT 2 SECONDS)
+
+  const startTime = performance.now();
+  let completed = false;
+
+  function dismissPreloader() {
+    if (completed) return;
+    completed = true;
+    bar.style.width = '100%';
+    counter.textContent = '100%';
+    if (status) status.textContent = 'SYSTEM READY • WELCOME';
+
+    preloader.classList.add('loaded');
+    document.body.classList.add('page-revealed');
+
+    // Trigger hero entrance stagger
+    const heroElements = document.querySelectorAll('.hero-kicker-strip, .hero-full-name, .hero-rotator-line, .hero-summary-text, .hero-quick-actions');
+    heroElements.forEach((el, idx) => {
+      el.style.animation = `heroFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${idx * 0.08}s both`;
+    });
+  }
+
+  function tick(currentTime) {
+    if (completed) return;
+
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(100, Math.round((elapsed / TOTAL_COUNT_TIME) * 100));
+
+    bar.style.width = `${progress}%`;
+    counter.textContent = `${progress}%`;
+
+    // Update telemetry status label
+    if (status) {
+      const currentStep = telemetrySteps.find(step => progress <= step.threshold) || telemetrySteps[telemetrySteps.length - 1];
+      status.textContent = currentStep.label;
+    }
+
+    if (elapsed < TOTAL_COUNT_TIME) {
+      requestAnimationFrame(tick);
+    } else {
+      // Reached 100%, hold for exactly HOLD_TIME ms to make total delay 2000ms
+      setTimeout(dismissPreloader, HOLD_TIME);
+    }
+  }
+
+  requestAnimationFrame(tick);
+
+  // Instant skip on click / tap
+  preloader.addEventListener('click', dismissPreloader);
 }
