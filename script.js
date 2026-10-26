@@ -106,7 +106,26 @@ function initViewSwitcher() {
       const topOffset = heroSection.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top: Math.max(0, topOffset), behavior: 'smooth' });
     }
+
+    // Update URL hash without causing a page jump
+    if (history.replaceState) {
+      history.replaceState(null, null, `#${targetViewId}`);
+    }
   }
+
+  // Check URL hash on initial load (e.g. #skills or #view-skills)
+  const initialHash = window.location.hash.replace(/^#view-|^#/, '');
+  if (initialHash && VIEW_IDS.includes(initialHash)) {
+    switchView(initialHash);
+  }
+
+  // React to browser back / forward navigation
+  window.addEventListener('hashchange', () => {
+    const currentHash = window.location.hash.replace(/^#view-|^#/, '');
+    if (currentHash && VIEW_IDS.includes(currentHash)) {
+      switchView(currentHash);
+    }
+  });
 
   // Desktop tabs click
   viewTabs.forEach(tab => {
@@ -350,6 +369,13 @@ function initMobileDrawer() {
       closeMobileDrawer();
     }
   });
+
+  // Automatically close drawer if resized to desktop layout
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1180 && mobileDrawerOpen) {
+      closeMobileDrawer();
+    }
+  }, { passive: true });
 }
 
 function openMobileDrawer() {
