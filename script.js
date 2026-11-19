@@ -240,6 +240,7 @@ function initTypewriter() {
   if (!rotatorElem) return;
 
   const roles = [
+    'Founder of VACHAAN',
     'Vibe Coding',
     'Camera-Based Web Apps',
     'Cloud Computing',
